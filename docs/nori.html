@@ -1,0 +1,1718 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.7.1" />
+<title>nori API documentation</title>
+<meta name="description" content="Unified Window Class." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>nori</code></h1>
+</header>
+<section id="section-intro">
+<p>Unified Window Class.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;Unified Window Class.&#34;&#34;&#34;
+
+import webbrowser
+
+from PyQt5 import QtCore, QtWidgets
+
+import utils
+from utils import LOG
+
+
+class Nori(QtWidgets.QMainWindow):
+    &#34;&#34;&#34;The main window for applications.&#34;&#34;&#34;
+
+    DEFAULT_ICON = &#39;defaultIcon.png&#39;
+    DEFAULT_TITLE = &#39;Nori&#39;
+
+    PACKAGE_CONFIG = utils.get_package_config()
+
+    def __init__(
+        self,
+        parent=None,
+        central_widget=None,
+        icon=None,
+        title=None,
+        show_status_bar=None,
+        as_popup=None,
+        center=None,
+        style=None,
+        palette=None,
+        on_open=None,
+        on_close=None,
+        refresh=None,
+        help_link=None,
+        fonts=None
+    ):
+        &#34;&#34;&#34;Initialize the window.
+
+        Args:
+            parent (QObject): The parent application, window, widget, etc.
+            central_widget (QWidget or .ui file path):
+                The widget to set as the central widget.
+                If using a .ui file path, provide a string. The .ui file should
+                load a QWidget, not a window.
+            icon (str): The name of the icon to set for the window.
+            title (str): The title of the window.
+            show_status_bar (bool): Whether or not to show the status bar.
+                If False, messages sent to the status bar will be ignored.
+            as_popup (bool): Whether of not to make this window a popup.
+                As a popup, the window becomes modal and will not have a menu
+                bar or status bar.
+            center (bool): Whether or not to center the window.
+            style (str): The name of the stylesheet to use.
+                If nothing is provided, a default is used.
+                &#39;none&#39; can also be provided to not apply any styling.
+                    In the case of a child window, it will inherit the parents
+                    style and palette.
+            palette (str): The name of the palette to use.
+                If none is provided, a default is used.
+            on_open (function): Function to run when the window opens.
+            on_close (function): Function to run when the window closes.
+            refresh (function): Function to run when &#34;File&#34; -&gt; &#34;Refresh&#34; is
+                clicked. If nothing is provided, the &#34;Refresh&#34; item is not
+                created.
+            help_link (str): The URL of the Confluence page for the
+                application.
+            fonts (list): List of font families to load.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        super(Nori, self).__init__(parent)
+
+        self.parent = parent
+        self.central_widget = central_widget
+        self.icon = icon or self.DEFAULT_ICON
+        self.title = title or self.DEFAULT_TITLE
+        self.show_status_bar = show_status_bar or False
+        self.as_popup = as_popup or False
+        self.center = center or False
+        self.style = style or utils.DEFAULT_STYLE
+        self.palette = palette or utils.DEFAULT_PALETTE
+        self.on_open = on_open
+        self.on_close = on_close
+        self.refresh = refresh
+        self.help_link = help_link or self.PACKAGE_CONFIG[&#39;nori_github_page&#39;]
+        self.fonts = fonts or []
+
+        self.app = utils.get_app_instance()
+
+        # This stores the docked widgets
+        self.docked_widgets = {
+            &#39;top&#39;: {
+                &#39;area&#39;: QtCore.Qt.TopDockWidgetArea,
+                &#39;widgets&#39;: [],
+            },
+            &#39;right&#39;: {
+                &#39;area&#39;: QtCore.Qt.RightDockWidgetArea,
+                &#39;widgets&#39;: [],
+            },
+            &#39;bottom&#39;: {
+                &#39;area&#39;: QtCore.Qt.BottomDockWidgetArea,
+                &#39;widgets&#39;: [],
+            },
+            &#39;left&#39;: {
+                &#39;area&#39;: QtCore.Qt.LeftDockWidgetArea,
+                &#39;widgets&#39;: [],
+            }
+        }
+
+        if not self.parent:
+            self.parent = utils.get_application_window()
+
+        self.setWindowTitle(self.title)
+        self.set_window_icon()
+        self.stylesheet = self._setStyleSheet()
+
+        self._set_central_widget()
+
+        if self.show_status_bar:
+            self.statusBar().show()
+
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+
+        if not self.as_popup:
+            self.add_menu_bar()
+            self.add_file_menu()
+
+        else:
+            self.setWindowFlags(
+                self.windowFlags() | QtCore.Qt.WindowStaysOnTopHint)
+            self.setWindowModality(QtCore.Qt.ApplicationModal)
+
+        if self.fonts:
+            self.load_fonts()
+
+        if self.center:
+            utils.move_to_center(self)
+
+        # Set dock options
+        self.setDockOptions(
+            QtWidgets.QMainWindow.AnimatedDocks
+            | QtWidgets.QMainWindow.AllowNestedDocks
+            | QtWidgets.QMainWindow.AllowTabbedDocks
+        )
+
+    def set_window_icon(self):
+        &#34;&#34;&#34;Set the window icon.&#34;&#34;&#34;
+        window_icon = (
+            utils.get_icon(self.icon) or utils.get_icon(self.DEFAULT_ICON)
+        )
+        self.setWindowIcon(window_icon)
+
+    def keyPressEvent(self, event):
+        &#34;&#34;&#34;Check for certain keys being pressed and act on them.
+
+        Override of built in keyPressEvent.
+        &#34;&#34;&#34;
+        # Press escape to close the window
+        if event.key() == QtCore.Qt.Key_Escape:
+            self.close()
+
+        # These prevent Maya from stealing focus when Shift or Ctrl are pressed
+        if event.modifiers() and QtCore.Qt.ShiftModifier:
+            self.shift = True
+
+        if event.modifiers() and QtCore.Qt.ControlModifier:
+            self.control = True
+
+    def _setStyleSheet(self):
+        &#34;&#34;&#34;Set the window stylesheet.&#34;&#34;&#34;
+        # If the style given in &#39;none&#39;, don&#39;t apply any styling
+        if self.style == &#39;none&#39;:
+            return &#39;&#39;
+
+        style = utils.get_stylesheet(self.style, self.palette)
+        self.setStyleSheet(style)
+        return style
+
+    def _set_central_widget(self):
+        &#34;&#34;&#34;Set the central widget.&#34;&#34;&#34;
+        if isinstance(self.central_widget, str):
+            self.central_widget = utils.load_widget_from_file(
+                self.central_widget
+            )
+
+        if not self.central_widget:
+            return
+
+        LOG.debug(&#34;Setting central_widget: {}&#34;.format(self.central_widget))
+        self.setCentralWidget(self.central_widget)
+
+    def add_dock_panel(
+        self,
+        widget=None,
+        position=None,
+        title=None,
+        floating=None
+    ):
+        &#34;&#34;&#34;Add a dockable panel to the main window.
+
+        Args:
+            widget (QWidget): Any object that inherits QWidget.
+            position (str): Position for the docked widget.
+                Can be &#39;top&#39;, &#39;right&#39;, &#39;bottom&#39;, or &#39;left&#39;.
+                Default is &#39;right&#39;.
+            title (str): The title of the dock.
+            floating (bool): Whether the widget is floating.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        floating = True if floating else False
+        position = position or &#39;right&#39;
+        title = title or &#34;{}_{}&#34;.format(
+            position, len(self.docked_widgets[position][&#39;widgets&#39;])
+        )
+
+        dock_widget = QtWidgets.QDockWidget(title)
+        if widget:
+            dock_widget.setWidget(widget)
+
+        # Add the dock widget
+        self.addDockWidget(
+            self.docked_widgets[position][&#39;area&#39;], dock_widget
+        )
+
+        # If any widgets are already docked in this position, add the new one
+        # as a tabbed dock undernieth the existing ones
+        if self.docked_widgets[position][&#39;widgets&#39;]:
+            self.tabifyDockWidget(
+                self.docked_widgets[position][&#39;widgets&#39;][-1], dock_widget)
+
+        # Add the widget to the list of docked widgets
+        self.docked_widgets[position][&#39;widgets&#39;].append(dock_widget)
+
+        # Keep the first widget on top
+        self.docked_widgets[position][&#39;widgets&#39;][0].raise_()
+
+        dock_widget.setFloating(floating)
+
+    def remove_dock_panel(self, title):
+        &#34;&#34;&#34;Remove a dockable panel based on name.
+
+        Args:
+            title (str): Name of the panel to remove.
+
+        Returns:
+            (bool): Whether or not the panel was successfully removed.
+        &#34;&#34;&#34;
+        # Find the dock from the name
+        for position in self.docked_widgets:
+            for widget in self.docked_widgets[position][&#39;widgets&#39;]:
+                if title == widget.title():
+                    self.removeWidget(widget)
+                    widget.deleteLater()
+
+                self.docked_widgets[position][&#39;widgets&#39;].remove(widget)
+                LOG.debug(&#34;Removed panel: {}&#34;.format(title))
+                return True
+
+        # This will run if nothing is found
+        LOG.error(
+            &#34;Panel \&#34;{}\&#34; could not be deleted because it could not be found.&#34;
+            .format(title)
+        )
+        return False
+
+    def add_menu_bar(self):
+        &#34;&#34;&#34;Add a menu bar to the window.&#34;&#34;&#34;
+        self.menu_bar = QtWidgets.QMenuBar()
+        self.setMenuBar(self.menu_bar)
+
+    def add_file_menu(self):
+        &#34;&#34;&#34;Add the default File menu and associated actions.&#34;&#34;&#34;
+        actions = []
+
+        actions.append(self.create_help_action())
+        if self.refresh:
+            actions.append(&#39;separator&#39;)
+            actions.append(self.create_refresh_action())
+
+        actions.append(&#39;separator&#39;)
+        actions.append(self.create_exit_action())
+
+        self.file_menu = self.add_menu(&#39;&amp;File&#39;, actions)
+
+    def get_menus(self):
+        &#34;&#34;&#34;Get all the menus in the menu bar.
+
+        Args:
+            None
+
+        Returns:
+            menu_items (list): A list of menus.
+        &#34;&#34;&#34;
+        menu_items = [
+            i for i in self.menu_bar.children()
+            if isinstance(i, QtWidgets.QMenu)
+        ]
+
+        return menu_items
+
+    def add_menu(self, name, actions=[]):
+        &#34;&#34;&#34;Add a menu to the given parent.
+
+        Args:
+            name (str): Name of the menu to add.
+            actions (list): List of actions to add.
+
+        Returns:
+            menu (QMenu): The created menu with its actions
+        &#34;&#34;&#34;
+        if self.as_popup:
+            LOG.error(&#34;Cannot add menus in popup mode.&#34;)
+            return
+
+        if name in [m.title() for m in self.get_menus()]:
+            LOG.warning(&#34;Menu already exists.&#34;)
+
+        menu = self.menu_bar.addMenu(name)
+
+        self.add_menu_actions(menu, actions)
+
+    def add_menu_actions(self, menu, actions=[]):
+        &#34;&#34;&#34;Add menu actions to the given menu.
+
+        Args:
+            menu (QMenu): The menu to add an action to.
+            actions (list): A list of QActions or &#39;seperators&#39;.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        for action in actions:
+            if action == &#39;separator&#39;:
+                menu.addSeparator()
+                continue
+
+            menu.addAction(action)
+
+    def create_refresh_action(self):
+        &#34;&#34;&#34;Create the refresh menu action.
+
+        Args:
+            None
+
+        Returns:
+            action (QAction): The refresh action.
+        &#34;&#34;&#34;
+        icon = utils.get_icon(&#39;outline-refresh-white.png&#39;)
+        action = QtWidgets.QAction(icon, &#39;Refresh&#39;, self)
+        action.setShortcut(&#39;Ctrl+R&#39;)
+        action.triggered.connect(self.refresh)
+
+        return action
+
+    def create_help_action(self):
+        &#34;&#34;&#34;Create the help menu action.
+
+        Args:
+            None
+
+        Returns:
+            action (QAction): The help action.
+        &#34;&#34;&#34;
+        icon = utils.get_icon(&#39;cloud-question.png&#39;)
+        action = QtWidgets.QAction(icon, &#39;Help&#39;, self)
+        action.triggered.connect(self.get_help)
+
+        return action
+
+    def create_exit_action(self):
+        &#34;&#34;&#34;Create the exit menu action.
+
+        Args:
+            None
+
+        Returns:
+            action (QAction): The exit action.
+        &#34;&#34;&#34;
+        icon = utils.get_icon(&#39;close-box-outline.png&#39;)
+        action = QtWidgets.QAction(icon, &#39;Exit&#39;, self)
+        action.setShortcut(&#39;Ctrl+Q&#39;)
+        action.triggered.connect(self.close)
+
+        return action
+
+    def get_help(self):
+        &#34;&#34;&#34;Open a browser window to the help page.&#34;&#34;&#34;
+        webbrowser.open(self.help_link, new=0, autoraise=True)
+
+    def remove_menu(self, name):
+        &#34;&#34;&#34;Remove a menu from the window.
+
+        Args:
+            name (str): Menu name to remove.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        if self.as_popup:
+            LOG.error(&#34;Cannot remove menus in popup mode.&#34;)
+            return
+
+        if name in self.PACKAGE_CONFIG[&#39;locked_menus&#39;]:
+            LOG.error(&#39;Cannot delete {}.&#39;.format(name))
+
+    def display_status_message(self, message, status=&#39;&#39;):
+        &#34;&#34;&#34;Display a message in the status bar.
+
+        Possible statuses:
+        default: No background color
+        success: Green background
+        warning: Yellow background
+        error: Red background
+
+        Args:
+            message (str): Message to display.
+            status (str): Status of the message bar (used for coloring).
+
+        Returns:
+            result (bool): Whether or not the message was successfully
+                displayed.
+        &#34;&#34;&#34;
+        if not self.show_status_bar:
+            LOG.warning(
+                &#39;Message sent to status bar, but status bar is not enabled.&#39;)
+            return False
+
+        if status == &#39;success&#39;:
+            self.statusBar().setObjectName(&#39;success&#39;)
+        elif status == &#39;warning&#39;:
+            self.statusBar().setObjectName(&#39;warning&#39;)
+        elif status == &#39;error&#39;:
+            self.statusBar().setObjectName(&#39;error&#39;)
+        else:
+            self.statusBar().setObjectName(&#39;&#39;)
+
+        self.statusBar().showMessage(message)
+
+        return True
+
+    def closeEvent(self, event):
+        &#34;&#34;&#34;Cleanup when the window closes.&#34;&#34;&#34;
+        LOG.debug(&#34;Closing&#34;)
+        if self.on_close:
+            self.on_close
+
+    def load_fonts(self):
+        &#34;&#34;&#34;Load any custom fonts.
+
+        Once the font is loaded, you can set it through:
+            font = QFont(&#34;FONT_FAMILY&#34;, SIZE, FLAGS)
+            OBJECT.setFont(font)
+        Eg.
+            font = QFont(&#34;Cousine&#34;, 24)
+            self.setFont(font)
+        &#34;&#34;&#34;
+        for font in self.fonts:
+            utils.load_custom_fonts(font)
+
+    def __repr__(self):
+        &#34;&#34;&#34;Return the instance.&#34;&#34;&#34;
+        return self
+
+    def __str__(self):
+        &#34;&#34;&#34;Return name of the class.&#34;&#34;&#34;
+        return &#34;Name: {}&#34;.format(self.title)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="nori.Nori"><code class="flex name class">
+<span>class <span class="ident">Nori</span></span>
+<span>(</span><span>parent=None, central_widget=None, icon=None, title=None, show_status_bar=None, as_popup=None, center=None, style=None, palette=None, on_open=None, on_close=None, refresh=None, help_link=None, fonts=None)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>The main window for applications.</p>
+<p>Initialize the window.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>parent</code></strong> :&ensp;<code>QObject</code></dt>
+<dd>The parent application, window, widget, etc.</dd>
+<dt>central_widget (QWidget or .ui file path):</dt>
+<dt>The widget to set as the central widget.</dt>
+<dt>If using a .ui file path, provide a string. The .ui file should</dt>
+<dt>load a QWidget, not a window.</dt>
+<dt><strong><code>icon</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the icon to set for the window.</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>str</code></dt>
+<dd>The title of the window.</dd>
+<dt><strong><code>show_status_bar</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether or not to show the status bar.
+If False, messages sent to the status bar will be ignored.</dd>
+<dt><strong><code>as_popup</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether of not to make this window a popup.
+As a popup, the window becomes modal and will not have a menu
+bar or status bar.</dd>
+<dt><strong><code>center</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether or not to center the window.</dd>
+<dt><strong><code>style</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the stylesheet to use.
+If nothing is provided, a default is used.
+'none' can also be provided to not apply any styling.
+In the case of a child window, it will inherit the parents
+style and palette.</dd>
+<dt><strong><code>palette</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the palette to use.
+If none is provided, a default is used.</dd>
+<dt><strong><code>on_open</code></strong> :&ensp;<code>function</code></dt>
+<dd>Function to run when the window opens.</dd>
+<dt><strong><code>on_close</code></strong> :&ensp;<code>function</code></dt>
+<dd>Function to run when the window closes.</dd>
+<dt><strong><code>refresh</code></strong> :&ensp;<code>function</code></dt>
+<dd>Function to run when "File" -&gt; "Refresh" is
+clicked. If nothing is provided, the "Refresh" item is not
+created.</dd>
+<dt><strong><code>help_link</code></strong> :&ensp;<code>str</code></dt>
+<dd>The URL of the Confluence page for the
+application.</dd>
+<dt><strong><code>fonts</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of font families to load.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Nori(QtWidgets.QMainWindow):
+    &#34;&#34;&#34;The main window for applications.&#34;&#34;&#34;
+
+    DEFAULT_ICON = &#39;defaultIcon.png&#39;
+    DEFAULT_TITLE = &#39;Nori&#39;
+
+    PACKAGE_CONFIG = utils.get_package_config()
+
+    def __init__(
+        self,
+        parent=None,
+        central_widget=None,
+        icon=None,
+        title=None,
+        show_status_bar=None,
+        as_popup=None,
+        center=None,
+        style=None,
+        palette=None,
+        on_open=None,
+        on_close=None,
+        refresh=None,
+        help_link=None,
+        fonts=None
+    ):
+        &#34;&#34;&#34;Initialize the window.
+
+        Args:
+            parent (QObject): The parent application, window, widget, etc.
+            central_widget (QWidget or .ui file path):
+                The widget to set as the central widget.
+                If using a .ui file path, provide a string. The .ui file should
+                load a QWidget, not a window.
+            icon (str): The name of the icon to set for the window.
+            title (str): The title of the window.
+            show_status_bar (bool): Whether or not to show the status bar.
+                If False, messages sent to the status bar will be ignored.
+            as_popup (bool): Whether of not to make this window a popup.
+                As a popup, the window becomes modal and will not have a menu
+                bar or status bar.
+            center (bool): Whether or not to center the window.
+            style (str): The name of the stylesheet to use.
+                If nothing is provided, a default is used.
+                &#39;none&#39; can also be provided to not apply any styling.
+                    In the case of a child window, it will inherit the parents
+                    style and palette.
+            palette (str): The name of the palette to use.
+                If none is provided, a default is used.
+            on_open (function): Function to run when the window opens.
+            on_close (function): Function to run when the window closes.
+            refresh (function): Function to run when &#34;File&#34; -&gt; &#34;Refresh&#34; is
+                clicked. If nothing is provided, the &#34;Refresh&#34; item is not
+                created.
+            help_link (str): The URL of the Confluence page for the
+                application.
+            fonts (list): List of font families to load.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        super(Nori, self).__init__(parent)
+
+        self.parent = parent
+        self.central_widget = central_widget
+        self.icon = icon or self.DEFAULT_ICON
+        self.title = title or self.DEFAULT_TITLE
+        self.show_status_bar = show_status_bar or False
+        self.as_popup = as_popup or False
+        self.center = center or False
+        self.style = style or utils.DEFAULT_STYLE
+        self.palette = palette or utils.DEFAULT_PALETTE
+        self.on_open = on_open
+        self.on_close = on_close
+        self.refresh = refresh
+        self.help_link = help_link or self.PACKAGE_CONFIG[&#39;nori_github_page&#39;]
+        self.fonts = fonts or []
+
+        self.app = utils.get_app_instance()
+
+        # This stores the docked widgets
+        self.docked_widgets = {
+            &#39;top&#39;: {
+                &#39;area&#39;: QtCore.Qt.TopDockWidgetArea,
+                &#39;widgets&#39;: [],
+            },
+            &#39;right&#39;: {
+                &#39;area&#39;: QtCore.Qt.RightDockWidgetArea,
+                &#39;widgets&#39;: [],
+            },
+            &#39;bottom&#39;: {
+                &#39;area&#39;: QtCore.Qt.BottomDockWidgetArea,
+                &#39;widgets&#39;: [],
+            },
+            &#39;left&#39;: {
+                &#39;area&#39;: QtCore.Qt.LeftDockWidgetArea,
+                &#39;widgets&#39;: [],
+            }
+        }
+
+        if not self.parent:
+            self.parent = utils.get_application_window()
+
+        self.setWindowTitle(self.title)
+        self.set_window_icon()
+        self.stylesheet = self._setStyleSheet()
+
+        self._set_central_widget()
+
+        if self.show_status_bar:
+            self.statusBar().show()
+
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+
+        if not self.as_popup:
+            self.add_menu_bar()
+            self.add_file_menu()
+
+        else:
+            self.setWindowFlags(
+                self.windowFlags() | QtCore.Qt.WindowStaysOnTopHint)
+            self.setWindowModality(QtCore.Qt.ApplicationModal)
+
+        if self.fonts:
+            self.load_fonts()
+
+        if self.center:
+            utils.move_to_center(self)
+
+        # Set dock options
+        self.setDockOptions(
+            QtWidgets.QMainWindow.AnimatedDocks
+            | QtWidgets.QMainWindow.AllowNestedDocks
+            | QtWidgets.QMainWindow.AllowTabbedDocks
+        )
+
+    def set_window_icon(self):
+        &#34;&#34;&#34;Set the window icon.&#34;&#34;&#34;
+        window_icon = (
+            utils.get_icon(self.icon) or utils.get_icon(self.DEFAULT_ICON)
+        )
+        self.setWindowIcon(window_icon)
+
+    def keyPressEvent(self, event):
+        &#34;&#34;&#34;Check for certain keys being pressed and act on them.
+
+        Override of built in keyPressEvent.
+        &#34;&#34;&#34;
+        # Press escape to close the window
+        if event.key() == QtCore.Qt.Key_Escape:
+            self.close()
+
+        # These prevent Maya from stealing focus when Shift or Ctrl are pressed
+        if event.modifiers() and QtCore.Qt.ShiftModifier:
+            self.shift = True
+
+        if event.modifiers() and QtCore.Qt.ControlModifier:
+            self.control = True
+
+    def _setStyleSheet(self):
+        &#34;&#34;&#34;Set the window stylesheet.&#34;&#34;&#34;
+        # If the style given in &#39;none&#39;, don&#39;t apply any styling
+        if self.style == &#39;none&#39;:
+            return &#39;&#39;
+
+        style = utils.get_stylesheet(self.style, self.palette)
+        self.setStyleSheet(style)
+        return style
+
+    def _set_central_widget(self):
+        &#34;&#34;&#34;Set the central widget.&#34;&#34;&#34;
+        if isinstance(self.central_widget, str):
+            self.central_widget = utils.load_widget_from_file(
+                self.central_widget
+            )
+
+        if not self.central_widget:
+            return
+
+        LOG.debug(&#34;Setting central_widget: {}&#34;.format(self.central_widget))
+        self.setCentralWidget(self.central_widget)
+
+    def add_dock_panel(
+        self,
+        widget=None,
+        position=None,
+        title=None,
+        floating=None
+    ):
+        &#34;&#34;&#34;Add a dockable panel to the main window.
+
+        Args:
+            widget (QWidget): Any object that inherits QWidget.
+            position (str): Position for the docked widget.
+                Can be &#39;top&#39;, &#39;right&#39;, &#39;bottom&#39;, or &#39;left&#39;.
+                Default is &#39;right&#39;.
+            title (str): The title of the dock.
+            floating (bool): Whether the widget is floating.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        floating = True if floating else False
+        position = position or &#39;right&#39;
+        title = title or &#34;{}_{}&#34;.format(
+            position, len(self.docked_widgets[position][&#39;widgets&#39;])
+        )
+
+        dock_widget = QtWidgets.QDockWidget(title)
+        if widget:
+            dock_widget.setWidget(widget)
+
+        # Add the dock widget
+        self.addDockWidget(
+            self.docked_widgets[position][&#39;area&#39;], dock_widget
+        )
+
+        # If any widgets are already docked in this position, add the new one
+        # as a tabbed dock undernieth the existing ones
+        if self.docked_widgets[position][&#39;widgets&#39;]:
+            self.tabifyDockWidget(
+                self.docked_widgets[position][&#39;widgets&#39;][-1], dock_widget)
+
+        # Add the widget to the list of docked widgets
+        self.docked_widgets[position][&#39;widgets&#39;].append(dock_widget)
+
+        # Keep the first widget on top
+        self.docked_widgets[position][&#39;widgets&#39;][0].raise_()
+
+        dock_widget.setFloating(floating)
+
+    def remove_dock_panel(self, title):
+        &#34;&#34;&#34;Remove a dockable panel based on name.
+
+        Args:
+            title (str): Name of the panel to remove.
+
+        Returns:
+            (bool): Whether or not the panel was successfully removed.
+        &#34;&#34;&#34;
+        # Find the dock from the name
+        for position in self.docked_widgets:
+            for widget in self.docked_widgets[position][&#39;widgets&#39;]:
+                if title == widget.title():
+                    self.removeWidget(widget)
+                    widget.deleteLater()
+
+                self.docked_widgets[position][&#39;widgets&#39;].remove(widget)
+                LOG.debug(&#34;Removed panel: {}&#34;.format(title))
+                return True
+
+        # This will run if nothing is found
+        LOG.error(
+            &#34;Panel \&#34;{}\&#34; could not be deleted because it could not be found.&#34;
+            .format(title)
+        )
+        return False
+
+    def add_menu_bar(self):
+        &#34;&#34;&#34;Add a menu bar to the window.&#34;&#34;&#34;
+        self.menu_bar = QtWidgets.QMenuBar()
+        self.setMenuBar(self.menu_bar)
+
+    def add_file_menu(self):
+        &#34;&#34;&#34;Add the default File menu and associated actions.&#34;&#34;&#34;
+        actions = []
+
+        actions.append(self.create_help_action())
+        if self.refresh:
+            actions.append(&#39;separator&#39;)
+            actions.append(self.create_refresh_action())
+
+        actions.append(&#39;separator&#39;)
+        actions.append(self.create_exit_action())
+
+        self.file_menu = self.add_menu(&#39;&amp;File&#39;, actions)
+
+    def get_menus(self):
+        &#34;&#34;&#34;Get all the menus in the menu bar.
+
+        Args:
+            None
+
+        Returns:
+            menu_items (list): A list of menus.
+        &#34;&#34;&#34;
+        menu_items = [
+            i for i in self.menu_bar.children()
+            if isinstance(i, QtWidgets.QMenu)
+        ]
+
+        return menu_items
+
+    def add_menu(self, name, actions=[]):
+        &#34;&#34;&#34;Add a menu to the given parent.
+
+        Args:
+            name (str): Name of the menu to add.
+            actions (list): List of actions to add.
+
+        Returns:
+            menu (QMenu): The created menu with its actions
+        &#34;&#34;&#34;
+        if self.as_popup:
+            LOG.error(&#34;Cannot add menus in popup mode.&#34;)
+            return
+
+        if name in [m.title() for m in self.get_menus()]:
+            LOG.warning(&#34;Menu already exists.&#34;)
+
+        menu = self.menu_bar.addMenu(name)
+
+        self.add_menu_actions(menu, actions)
+
+    def add_menu_actions(self, menu, actions=[]):
+        &#34;&#34;&#34;Add menu actions to the given menu.
+
+        Args:
+            menu (QMenu): The menu to add an action to.
+            actions (list): A list of QActions or &#39;seperators&#39;.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        for action in actions:
+            if action == &#39;separator&#39;:
+                menu.addSeparator()
+                continue
+
+            menu.addAction(action)
+
+    def create_refresh_action(self):
+        &#34;&#34;&#34;Create the refresh menu action.
+
+        Args:
+            None
+
+        Returns:
+            action (QAction): The refresh action.
+        &#34;&#34;&#34;
+        icon = utils.get_icon(&#39;outline-refresh-white.png&#39;)
+        action = QtWidgets.QAction(icon, &#39;Refresh&#39;, self)
+        action.setShortcut(&#39;Ctrl+R&#39;)
+        action.triggered.connect(self.refresh)
+
+        return action
+
+    def create_help_action(self):
+        &#34;&#34;&#34;Create the help menu action.
+
+        Args:
+            None
+
+        Returns:
+            action (QAction): The help action.
+        &#34;&#34;&#34;
+        icon = utils.get_icon(&#39;cloud-question.png&#39;)
+        action = QtWidgets.QAction(icon, &#39;Help&#39;, self)
+        action.triggered.connect(self.get_help)
+
+        return action
+
+    def create_exit_action(self):
+        &#34;&#34;&#34;Create the exit menu action.
+
+        Args:
+            None
+
+        Returns:
+            action (QAction): The exit action.
+        &#34;&#34;&#34;
+        icon = utils.get_icon(&#39;close-box-outline.png&#39;)
+        action = QtWidgets.QAction(icon, &#39;Exit&#39;, self)
+        action.setShortcut(&#39;Ctrl+Q&#39;)
+        action.triggered.connect(self.close)
+
+        return action
+
+    def get_help(self):
+        &#34;&#34;&#34;Open a browser window to the help page.&#34;&#34;&#34;
+        webbrowser.open(self.help_link, new=0, autoraise=True)
+
+    def remove_menu(self, name):
+        &#34;&#34;&#34;Remove a menu from the window.
+
+        Args:
+            name (str): Menu name to remove.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        if self.as_popup:
+            LOG.error(&#34;Cannot remove menus in popup mode.&#34;)
+            return
+
+        if name in self.PACKAGE_CONFIG[&#39;locked_menus&#39;]:
+            LOG.error(&#39;Cannot delete {}.&#39;.format(name))
+
+    def display_status_message(self, message, status=&#39;&#39;):
+        &#34;&#34;&#34;Display a message in the status bar.
+
+        Possible statuses:
+        default: No background color
+        success: Green background
+        warning: Yellow background
+        error: Red background
+
+        Args:
+            message (str): Message to display.
+            status (str): Status of the message bar (used for coloring).
+
+        Returns:
+            result (bool): Whether or not the message was successfully
+                displayed.
+        &#34;&#34;&#34;
+        if not self.show_status_bar:
+            LOG.warning(
+                &#39;Message sent to status bar, but status bar is not enabled.&#39;)
+            return False
+
+        if status == &#39;success&#39;:
+            self.statusBar().setObjectName(&#39;success&#39;)
+        elif status == &#39;warning&#39;:
+            self.statusBar().setObjectName(&#39;warning&#39;)
+        elif status == &#39;error&#39;:
+            self.statusBar().setObjectName(&#39;error&#39;)
+        else:
+            self.statusBar().setObjectName(&#39;&#39;)
+
+        self.statusBar().showMessage(message)
+
+        return True
+
+    def closeEvent(self, event):
+        &#34;&#34;&#34;Cleanup when the window closes.&#34;&#34;&#34;
+        LOG.debug(&#34;Closing&#34;)
+        if self.on_close:
+            self.on_close
+
+    def load_fonts(self):
+        &#34;&#34;&#34;Load any custom fonts.
+
+        Once the font is loaded, you can set it through:
+            font = QFont(&#34;FONT_FAMILY&#34;, SIZE, FLAGS)
+            OBJECT.setFont(font)
+        Eg.
+            font = QFont(&#34;Cousine&#34;, 24)
+            self.setFont(font)
+        &#34;&#34;&#34;
+        for font in self.fonts:
+            utils.load_custom_fonts(font)
+
+    def __repr__(self):
+        &#34;&#34;&#34;Return the instance.&#34;&#34;&#34;
+        return self
+
+    def __str__(self):
+        &#34;&#34;&#34;Return name of the class.&#34;&#34;&#34;
+        return &#34;Name: {}&#34;.format(self.title)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>PyQt5.QtWidgets.QMainWindow</li>
+<li>PyQt5.QtWidgets.QWidget</li>
+<li>PyQt5.QtCore.QObject</li>
+<li>PyQt5.QtGui.QPaintDevice</li>
+<li>Shiboken.Object</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="nori.Nori.DEFAULT_ICON"><code class="name">var <span class="ident">DEFAULT_ICON</span></code></dt>
+<dd>
+<section class="desc"><p>str(object='') -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.<strong>str</strong>() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.</p></section>
+</dd>
+<dt id="nori.Nori.DEFAULT_TITLE"><code class="name">var <span class="ident">DEFAULT_TITLE</span></code></dt>
+<dd>
+<section class="desc"><p>str(object='') -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.<strong>str</strong>() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.</p></section>
+</dd>
+<dt id="nori.Nori.PACKAGE_CONFIG"><code class="name">var <span class="ident">PACKAGE_CONFIG</span></code></dt>
+<dd>
+<section class="desc"><p>dict() -&gt; new empty dictionary
+dict(mapping) -&gt; new dictionary initialized from a mapping object's
+(key, value) pairs
+dict(iterable) -&gt; new dictionary initialized as if via:
+d = {}
+for k, v in iterable:
+d[k] = v
+dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
+in the keyword argument list.
+For example:
+dict(one=1, two=2)</p></section>
+</dd>
+<dt id="nori.Nori.staticMetaObject"><code class="name">var <span class="ident">staticMetaObject</span></code></dt>
+<dd>
+<section class="desc"></section>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="nori.Nori.add_dock_panel"><code class="name flex">
+<span>def <span class="ident">add_dock_panel</span></span>(<span>self, widget=None, position=None, title=None, floating=None)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Add a dockable panel to the main window.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>widget</code></strong> :&ensp;<code>QWidget</code></dt>
+<dd>Any object that inherits QWidget.</dd>
+<dt><strong><code>position</code></strong> :&ensp;<code>str</code></dt>
+<dd>Position for the docked widget.
+Can be 'top', 'right', 'bottom', or 'left'.
+Default is 'right'.</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>str</code></dt>
+<dd>The title of the dock.</dd>
+<dt><strong><code>floating</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether the widget is floating.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_dock_panel(
+    self,
+    widget=None,
+    position=None,
+    title=None,
+    floating=None
+):
+    &#34;&#34;&#34;Add a dockable panel to the main window.
+
+    Args:
+        widget (QWidget): Any object that inherits QWidget.
+        position (str): Position for the docked widget.
+            Can be &#39;top&#39;, &#39;right&#39;, &#39;bottom&#39;, or &#39;left&#39;.
+            Default is &#39;right&#39;.
+        title (str): The title of the dock.
+        floating (bool): Whether the widget is floating.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    floating = True if floating else False
+    position = position or &#39;right&#39;
+    title = title or &#34;{}_{}&#34;.format(
+        position, len(self.docked_widgets[position][&#39;widgets&#39;])
+    )
+
+    dock_widget = QtWidgets.QDockWidget(title)
+    if widget:
+        dock_widget.setWidget(widget)
+
+    # Add the dock widget
+    self.addDockWidget(
+        self.docked_widgets[position][&#39;area&#39;], dock_widget
+    )
+
+    # If any widgets are already docked in this position, add the new one
+    # as a tabbed dock undernieth the existing ones
+    if self.docked_widgets[position][&#39;widgets&#39;]:
+        self.tabifyDockWidget(
+            self.docked_widgets[position][&#39;widgets&#39;][-1], dock_widget)
+
+    # Add the widget to the list of docked widgets
+    self.docked_widgets[position][&#39;widgets&#39;].append(dock_widget)
+
+    # Keep the first widget on top
+    self.docked_widgets[position][&#39;widgets&#39;][0].raise_()
+
+    dock_widget.setFloating(floating)</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.add_file_menu"><code class="name flex">
+<span>def <span class="ident">add_file_menu</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Add the default File menu and associated actions.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_file_menu(self):
+    &#34;&#34;&#34;Add the default File menu and associated actions.&#34;&#34;&#34;
+    actions = []
+
+    actions.append(self.create_help_action())
+    if self.refresh:
+        actions.append(&#39;separator&#39;)
+        actions.append(self.create_refresh_action())
+
+    actions.append(&#39;separator&#39;)
+    actions.append(self.create_exit_action())
+
+    self.file_menu = self.add_menu(&#39;&amp;File&#39;, actions)</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.add_menu"><code class="name flex">
+<span>def <span class="ident">add_menu</span></span>(<span>self, name, actions=[])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Add a menu to the given parent.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the menu to add.</dd>
+<dt><strong><code>actions</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of actions to add.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>menu</code></strong> :&ensp;<code>QMenu</code></dt>
+<dd>The created menu with its actions</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_menu(self, name, actions=[]):
+    &#34;&#34;&#34;Add a menu to the given parent.
+
+    Args:
+        name (str): Name of the menu to add.
+        actions (list): List of actions to add.
+
+    Returns:
+        menu (QMenu): The created menu with its actions
+    &#34;&#34;&#34;
+    if self.as_popup:
+        LOG.error(&#34;Cannot add menus in popup mode.&#34;)
+        return
+
+    if name in [m.title() for m in self.get_menus()]:
+        LOG.warning(&#34;Menu already exists.&#34;)
+
+    menu = self.menu_bar.addMenu(name)
+
+    self.add_menu_actions(menu, actions)</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.add_menu_actions"><code class="name flex">
+<span>def <span class="ident">add_menu_actions</span></span>(<span>self, menu, actions=[])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Add menu actions to the given menu.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>menu</code></strong> :&ensp;<code>QMenu</code></dt>
+<dd>The menu to add an action to.</dd>
+<dt><strong><code>actions</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list of QActions or 'seperators'.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_menu_actions(self, menu, actions=[]):
+    &#34;&#34;&#34;Add menu actions to the given menu.
+
+    Args:
+        menu (QMenu): The menu to add an action to.
+        actions (list): A list of QActions or &#39;seperators&#39;.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    for action in actions:
+        if action == &#39;separator&#39;:
+            menu.addSeparator()
+            continue
+
+        menu.addAction(action)</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.add_menu_bar"><code class="name flex">
+<span>def <span class="ident">add_menu_bar</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Add a menu bar to the window.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_menu_bar(self):
+    &#34;&#34;&#34;Add a menu bar to the window.&#34;&#34;&#34;
+    self.menu_bar = QtWidgets.QMenuBar()
+    self.setMenuBar(self.menu_bar)</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.closeEvent"><code class="name flex">
+<span>def <span class="ident">closeEvent</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Cleanup when the window closes.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def closeEvent(self, event):
+    &#34;&#34;&#34;Cleanup when the window closes.&#34;&#34;&#34;
+    LOG.debug(&#34;Closing&#34;)
+    if self.on_close:
+        self.on_close</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.create_exit_action"><code class="name flex">
+<span>def <span class="ident">create_exit_action</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Create the exit menu action.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>None</code></strong></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>action</code></strong> :&ensp;<code>QAction</code></dt>
+<dd>The exit action.</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_exit_action(self):
+    &#34;&#34;&#34;Create the exit menu action.
+
+    Args:
+        None
+
+    Returns:
+        action (QAction): The exit action.
+    &#34;&#34;&#34;
+    icon = utils.get_icon(&#39;close-box-outline.png&#39;)
+    action = QtWidgets.QAction(icon, &#39;Exit&#39;, self)
+    action.setShortcut(&#39;Ctrl+Q&#39;)
+    action.triggered.connect(self.close)
+
+    return action</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.create_help_action"><code class="name flex">
+<span>def <span class="ident">create_help_action</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Create the help menu action.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>None</code></strong></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>action</code></strong> :&ensp;<code>QAction</code></dt>
+<dd>The help action.</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_help_action(self):
+    &#34;&#34;&#34;Create the help menu action.
+
+    Args:
+        None
+
+    Returns:
+        action (QAction): The help action.
+    &#34;&#34;&#34;
+    icon = utils.get_icon(&#39;cloud-question.png&#39;)
+    action = QtWidgets.QAction(icon, &#39;Help&#39;, self)
+    action.triggered.connect(self.get_help)
+
+    return action</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.create_refresh_action"><code class="name flex">
+<span>def <span class="ident">create_refresh_action</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Create the refresh menu action.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>None</code></strong></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>action</code></strong> :&ensp;<code>QAction</code></dt>
+<dd>The refresh action.</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_refresh_action(self):
+    &#34;&#34;&#34;Create the refresh menu action.
+
+    Args:
+        None
+
+    Returns:
+        action (QAction): The refresh action.
+    &#34;&#34;&#34;
+    icon = utils.get_icon(&#39;outline-refresh-white.png&#39;)
+    action = QtWidgets.QAction(icon, &#39;Refresh&#39;, self)
+    action.setShortcut(&#39;Ctrl+R&#39;)
+    action.triggered.connect(self.refresh)
+
+    return action</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.display_status_message"><code class="name flex">
+<span>def <span class="ident">display_status_message</span></span>(<span>self, message, status='')</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Display a message in the status bar.</p>
+<p>Possible statuses:
+default: No background color
+success: Green background
+warning: Yellow background
+error: Red background</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>message</code></strong> :&ensp;<code>str</code></dt>
+<dd>Message to display.</dd>
+<dt><strong><code>status</code></strong> :&ensp;<code>str</code></dt>
+<dd>Status of the message bar (used for coloring).</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>result</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether or not the message was successfully
+displayed.</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display_status_message(self, message, status=&#39;&#39;):
+    &#34;&#34;&#34;Display a message in the status bar.
+
+    Possible statuses:
+    default: No background color
+    success: Green background
+    warning: Yellow background
+    error: Red background
+
+    Args:
+        message (str): Message to display.
+        status (str): Status of the message bar (used for coloring).
+
+    Returns:
+        result (bool): Whether or not the message was successfully
+            displayed.
+    &#34;&#34;&#34;
+    if not self.show_status_bar:
+        LOG.warning(
+            &#39;Message sent to status bar, but status bar is not enabled.&#39;)
+        return False
+
+    if status == &#39;success&#39;:
+        self.statusBar().setObjectName(&#39;success&#39;)
+    elif status == &#39;warning&#39;:
+        self.statusBar().setObjectName(&#39;warning&#39;)
+    elif status == &#39;error&#39;:
+        self.statusBar().setObjectName(&#39;error&#39;)
+    else:
+        self.statusBar().setObjectName(&#39;&#39;)
+
+    self.statusBar().showMessage(message)
+
+    return True</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.get_help"><code class="name flex">
+<span>def <span class="ident">get_help</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Open a browser window to the help page.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_help(self):
+    &#34;&#34;&#34;Open a browser window to the help page.&#34;&#34;&#34;
+    webbrowser.open(self.help_link, new=0, autoraise=True)</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.get_menus"><code class="name flex">
+<span>def <span class="ident">get_menus</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all the menus in the menu bar.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>None</code></strong></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>menu_items</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list of menus.</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_menus(self):
+    &#34;&#34;&#34;Get all the menus in the menu bar.
+
+    Args:
+        None
+
+    Returns:
+        menu_items (list): A list of menus.
+    &#34;&#34;&#34;
+    menu_items = [
+        i for i in self.menu_bar.children()
+        if isinstance(i, QtWidgets.QMenu)
+    ]
+
+    return menu_items</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.keyPressEvent"><code class="name flex">
+<span>def <span class="ident">keyPressEvent</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Check for certain keys being pressed and act on them.</p>
+<p>Override of built in keyPressEvent.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def keyPressEvent(self, event):
+    &#34;&#34;&#34;Check for certain keys being pressed and act on them.
+
+    Override of built in keyPressEvent.
+    &#34;&#34;&#34;
+    # Press escape to close the window
+    if event.key() == QtCore.Qt.Key_Escape:
+        self.close()
+
+    # These prevent Maya from stealing focus when Shift or Ctrl are pressed
+    if event.modifiers() and QtCore.Qt.ShiftModifier:
+        self.shift = True
+
+    if event.modifiers() and QtCore.Qt.ControlModifier:
+        self.control = True</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.load_fonts"><code class="name flex">
+<span>def <span class="ident">load_fonts</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Load any custom fonts.</p>
+<p>Once the font is loaded, you can set it through:
+font = QFont("FONT_FAMILY", SIZE, FLAGS)
+OBJECT.setFont(font)
+Eg.
+font = QFont("Cousine", 24)
+self.setFont(font)</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_fonts(self):
+    &#34;&#34;&#34;Load any custom fonts.
+
+    Once the font is loaded, you can set it through:
+        font = QFont(&#34;FONT_FAMILY&#34;, SIZE, FLAGS)
+        OBJECT.setFont(font)
+    Eg.
+        font = QFont(&#34;Cousine&#34;, 24)
+        self.setFont(font)
+    &#34;&#34;&#34;
+    for font in self.fonts:
+        utils.load_custom_fonts(font)</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.remove_dock_panel"><code class="name flex">
+<span>def <span class="ident">remove_dock_panel</span></span>(<span>self, title)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Remove a dockable panel based on name.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>title</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the panel to remove.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>(bool): Whether or not the panel was successfully removed.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove_dock_panel(self, title):
+    &#34;&#34;&#34;Remove a dockable panel based on name.
+
+    Args:
+        title (str): Name of the panel to remove.
+
+    Returns:
+        (bool): Whether or not the panel was successfully removed.
+    &#34;&#34;&#34;
+    # Find the dock from the name
+    for position in self.docked_widgets:
+        for widget in self.docked_widgets[position][&#39;widgets&#39;]:
+            if title == widget.title():
+                self.removeWidget(widget)
+                widget.deleteLater()
+
+            self.docked_widgets[position][&#39;widgets&#39;].remove(widget)
+            LOG.debug(&#34;Removed panel: {}&#34;.format(title))
+            return True
+
+    # This will run if nothing is found
+    LOG.error(
+        &#34;Panel \&#34;{}\&#34; could not be deleted because it could not be found.&#34;
+        .format(title)
+    )
+    return False</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.remove_menu"><code class="name flex">
+<span>def <span class="ident">remove_menu</span></span>(<span>self, name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Remove a menu from the window.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>Menu name to remove.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove_menu(self, name):
+    &#34;&#34;&#34;Remove a menu from the window.
+
+    Args:
+        name (str): Menu name to remove.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    if self.as_popup:
+        LOG.error(&#34;Cannot remove menus in popup mode.&#34;)
+        return
+
+    if name in self.PACKAGE_CONFIG[&#39;locked_menus&#39;]:
+        LOG.error(&#39;Cannot delete {}.&#39;.format(name))</code></pre>
+</details>
+</dd>
+<dt id="nori.Nori.set_window_icon"><code class="name flex">
+<span>def <span class="ident">set_window_icon</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Set the window icon.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_window_icon(self):
+    &#34;&#34;&#34;Set the window icon.&#34;&#34;&#34;
+    window_icon = (
+        utils.get_icon(self.icon) or utils.get_icon(self.DEFAULT_ICON)
+    )
+    self.setWindowIcon(window_icon)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="nori.Nori" href="#nori.Nori">Nori</a></code></h4>
+<ul class="">
+<li><code><a title="nori.Nori.DEFAULT_ICON" href="#nori.Nori.DEFAULT_ICON">DEFAULT_ICON</a></code></li>
+<li><code><a title="nori.Nori.DEFAULT_TITLE" href="#nori.Nori.DEFAULT_TITLE">DEFAULT_TITLE</a></code></li>
+<li><code><a title="nori.Nori.PACKAGE_CONFIG" href="#nori.Nori.PACKAGE_CONFIG">PACKAGE_CONFIG</a></code></li>
+<li><code><a title="nori.Nori.add_dock_panel" href="#nori.Nori.add_dock_panel">add_dock_panel</a></code></li>
+<li><code><a title="nori.Nori.add_file_menu" href="#nori.Nori.add_file_menu">add_file_menu</a></code></li>
+<li><code><a title="nori.Nori.add_menu" href="#nori.Nori.add_menu">add_menu</a></code></li>
+<li><code><a title="nori.Nori.add_menu_actions" href="#nori.Nori.add_menu_actions">add_menu_actions</a></code></li>
+<li><code><a title="nori.Nori.add_menu_bar" href="#nori.Nori.add_menu_bar">add_menu_bar</a></code></li>
+<li><code><a title="nori.Nori.closeEvent" href="#nori.Nori.closeEvent">closeEvent</a></code></li>
+<li><code><a title="nori.Nori.create_exit_action" href="#nori.Nori.create_exit_action">create_exit_action</a></code></li>
+<li><code><a title="nori.Nori.create_help_action" href="#nori.Nori.create_help_action">create_help_action</a></code></li>
+<li><code><a title="nori.Nori.create_refresh_action" href="#nori.Nori.create_refresh_action">create_refresh_action</a></code></li>
+<li><code><a title="nori.Nori.display_status_message" href="#nori.Nori.display_status_message">display_status_message</a></code></li>
+<li><code><a title="nori.Nori.get_help" href="#nori.Nori.get_help">get_help</a></code></li>
+<li><code><a title="nori.Nori.get_menus" href="#nori.Nori.get_menus">get_menus</a></code></li>
+<li><code><a title="nori.Nori.keyPressEvent" href="#nori.Nori.keyPressEvent">keyPressEvent</a></code></li>
+<li><code><a title="nori.Nori.load_fonts" href="#nori.Nori.load_fonts">load_fonts</a></code></li>
+<li><code><a title="nori.Nori.remove_dock_panel" href="#nori.Nori.remove_dock_panel">remove_dock_panel</a></code></li>
+<li><code><a title="nori.Nori.remove_menu" href="#nori.Nori.remove_menu">remove_menu</a></code></li>
+<li><code><a title="nori.Nori.set_window_icon" href="#nori.Nori.set_window_icon">set_window_icon</a></code></li>
+<li><code><a title="nori.Nori.staticMetaObject" href="#nori.Nori.staticMetaObject">staticMetaObject</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.7.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
