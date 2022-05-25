@@ -1,30 +1,12 @@
-"""Globals."""
+from setuptools import setup
 
-import logging
-import os
-import yaml
-
-from exceptions import exceptions
-
-# Define the path local to the package
-LOCAL_PATH = os.path.abspath(os.path.dirname(__file__))
-
-# Set up logging
-logging.basicConfig(level=logging.INFO,
-                    format='%(module)s> %(message)s',
-                    datefmt='%m/%d/%Y %I:%M:%S%p')
-
-LOG = logging.getLogger("nori_ui")
-
-# Load the config file
-config_path = os.path.join(LOCAL_PATH, 'config.yaml')
-if not os.path.exists(config_path):
-    raise exceptions.NoriConfigError(
-        'Config file missing from: {}.'.format(config_path)
-    )
-
-try:
-    with open(config_path, 'r') as config_file:
-        CONFIG = yaml.full_load(config_file)
-except Exception as e:
-    raise exceptions.NoriConfigError('Invalid config.')
+setup(
+    name='nori_ui',
+    version='2.0.0',
+    description='Unified UI wrapper for Python 3 and PySide 6.',
+    license='Unlicense',
+    author='amorphousWaste',
+    url='https://github.com/amorphousWaste/nori_ui',
+    packages=['nori_ui'],
+    python_requires='>=3.9',
+)

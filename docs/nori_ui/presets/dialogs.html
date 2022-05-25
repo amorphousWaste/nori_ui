@@ -1,0 +1,1864 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="pdoc 8.0.0" />
+    <title>nori_ui.presets.dialogs API documentation</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%2244.5%202.5%2015%2015%22%3E%3Cpath%20d%3D%22M49.351%2021.041c-.233-.721-.546-2.408-.772-4.076-.042-.09-.067-.187-.046-.288-.166-1.347-.277-2.625-.241-3.351-1.378-1.008-2.271-2.586-2.271-4.362%200-.976.272-1.935.788-2.774.057-.094.122-.18.184-.268-.033-.167-.052-.339-.052-.516%200-1.477%201.202-2.679%202.679-2.679.791%200%201.496.352%201.987.9a6.3%206.3%200%200%201%201.001.029c.492-.564%201.207-.929%202.012-.929%201.477%200%202.679%201.202%202.679%202.679a2.65%202.65%200%200%201-.269%201.148c.383.747.595%201.572.595%202.41%200%202.311-1.507%204.29-3.635%205.107.037.699.147%202.27.423%203.294l.137.461c.156%202.136-4.612%205.166-5.199%203.215zm.127-4.919a4.78%204.78%200%200%200%20.775-.584c-.172-.115-.505-.254-.88-.378zm.331%202.302l.828-.502c-.202-.143-.576-.328-.984-.49zm.45%202.157l.701-.403c-.214-.115-.536-.249-.891-.376l.19.779zM49.13%204.141c0%20.152.123.276.276.276s.275-.124.275-.276-.123-.276-.276-.276-.275.124-.275.276zm.735-.389a1.15%201.15%200%200%201%20.314.783%201.16%201.16%200%200%201-1.162%201.162c-.457%200-.842-.27-1.032-.653-.026.117-.042.238-.042.362a1.68%201.68%200%200%200%201.679%201.679%201.68%201.68%200%200%200%201.679-1.679c0-.843-.626-1.535-1.436-1.654zm3.076%201.654a1.68%201.68%200%200%200%201.679%201.679%201.68%201.68%200%200%200%201.679-1.679c0-.037-.009-.072-.011-.109-.21.3-.541.508-.935.508a1.16%201.16%200%200%201-1.162-1.162%201.14%201.14%200%200%201%20.474-.912c-.015%200-.03-.005-.045-.005-.926.001-1.679.754-1.679%201.68zm1.861-1.265c0%20.152.123.276.276.276s.275-.124.275-.276-.123-.276-.276-.276-.275.124-.275.276zm1.823%204.823c0-.52-.103-1.035-.288-1.52-.466.394-1.06.64-1.717.64-1.144%200-2.116-.725-2.499-1.738-.383%201.012-1.355%201.738-2.499%201.738-.867%200-1.631-.421-2.121-1.062-.307.605-.478%201.267-.478%201.942%200%202.486%202.153%204.51%204.801%204.51s4.801-2.023%204.801-4.51zm-3.032%209.156l-.146-.492c-.276-1.02-.395-2.457-.444-3.268a6.11%206.11%200%200%201-1.18.115%206.01%206.01%200%200%201-2.536-.562l.006.175c.802.215%201.848.612%202.021%201.25.079.295-.021.601-.274.837l-.598.501c.667.304%201.243.698%201.311%201.179.02.144.022.507-.393.787l-.564.365c1.285.521%201.361.96%201.381%201.126.018.142.011.496-.427.746l-.854.489c.064-1.19%201.985-2.585%202.697-3.248zM49.34%209.925c0-.667%201-.667%201%200%200%20.653.818%201.205%201.787%201.205s1.787-.552%201.787-1.205c0-.667%201-.667%201%200%200%201.216-1.25%202.205-2.787%202.205s-2.787-.989-2.787-2.205zm-.887-7.633c-.093.077-.205.114-.317.114a.5.5%200%200%201-.318-.886L49.183.397a.5.5%200%200%201%20.703.068.5.5%200%200%201-.069.703zm7.661-.065c-.086%200-.173-.022-.253-.068l-1.523-.893c-.575-.337-.069-1.2.506-.863l1.523.892a.5.5%200%200%201%20.179.685c-.094.158-.261.247-.432.247z%22%20fill%3D%22%233bb300%22/%3E%3C/svg%3E"/>
+
+
+<style>/*! * Bootstrap Reboot v5.0.0 (https://getbootstrap.com/) * Copyright 2011-2021 The Bootstrap Authors * Copyright 2011-2021 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}abbr[data-bs-original-title],abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul{padding-left:2rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:.875em}mark{padding:.2em;background-color:#fcf8e3}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;direction:ltr;unicode-bidi:bidi-override}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:#d63384;word-wrap:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:.875em;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:1em;font-weight:700}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}tbody,td,tfoot,th,thead,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}@media (min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none!important}</style>
+<style>pre{line-height:125%;}td.linenos pre{color:#000000; background-color:#f0f0f0; padding-left:5px; padding-right:5px;}span.linenos{color:#000000; background-color:#f0f0f0; padding-left:5px; padding-right:5px;}td.linenos pre.special{color:#000000; background-color:#ffffc0; padding-left:5px; padding-right:5px;}span.linenos.special{color:#000000; background-color:#ffffc0; padding-left:5px; padding-right:5px;}.pdoc .hll{background-color:#49483e}.pdoc{background:#272822; color:#f8f8f2}.pdoc .c{color:#75715e}.pdoc .err{color:#960050; background-color:#1e0010}.pdoc .k{color:#66d9ef}.pdoc .l{color:#ae81ff}.pdoc .n{color:#f8f8f2}.pdoc .o{color:#f92672}.pdoc .p{color:#f8f8f2}.pdoc .ch{color:#75715e}.pdoc .cm{color:#75715e}.pdoc .cp{color:#75715e}.pdoc .cpf{color:#75715e}.pdoc .c1{color:#75715e}.pdoc .cs{color:#75715e}.pdoc .gd{color:#f92672}.pdoc .ge{font-style:italic}.pdoc .gi{color:#a6e22e}.pdoc .go{color:#66d9ef}.pdoc .gp{color:#f92672; font-weight:bold}.pdoc .gs{font-weight:bold}.pdoc .gu{color:#75715e}.pdoc .kc{color:#66d9ef}.pdoc .kd{color:#66d9ef}.pdoc .kn{color:#f92672}.pdoc .kp{color:#66d9ef}.pdoc .kr{color:#66d9ef}.pdoc .kt{color:#66d9ef}.pdoc .ld{color:#e6db74}.pdoc .m{color:#ae81ff}.pdoc .s{color:#e6db74}.pdoc .na{color:#a6e22e}.pdoc .nb{color:#f8f8f2}.pdoc .nc{color:#a6e22e}.pdoc .no{color:#66d9ef}.pdoc .nd{color:#a6e22e}.pdoc .ni{color:#f8f8f2}.pdoc .ne{color:#a6e22e}.pdoc .nf{color:#a6e22e}.pdoc .nl{color:#f8f8f2}.pdoc .nn{color:#f8f8f2}.pdoc .nx{color:#a6e22e}.pdoc .py{color:#f8f8f2}.pdoc .nt{color:#f92672}.pdoc .nv{color:#f8f8f2}.pdoc .ow{color:#f92672}.pdoc .w{color:#f8f8f2}.pdoc .mb{color:#ae81ff}.pdoc .mf{color:#ae81ff}.pdoc .mh{color:#ae81ff}.pdoc .mi{color:#ae81ff}.pdoc .mo{color:#ae81ff}.pdoc .sa{color:#e6db74}.pdoc .sb{color:#e6db74}.pdoc .sc{color:#e6db74}.pdoc .dl{color:#e6db74}.pdoc .sd{color:#e6db74}.pdoc .s2{color:#e6db74}.pdoc .se{color:#ae81ff}.pdoc .sh{color:#e6db74}.pdoc .si{color:#e6db74}.pdoc .sx{color:#e6db74}.pdoc .sr{color:#e6db74}.pdoc .s1{color:#e6db74}.pdoc .ss{color:#e6db74}.pdoc .bp{color:#f8f8f2}.pdoc .fm{color:#a6e22e}.pdoc .vc{color:#f8f8f2}.pdoc .vg{color:#f8f8f2}.pdoc .vi{color:#f8f8f2}.pdoc .vm{color:#f8f8f2}.pdoc .il{color:#ae81ff}</style>
+<style>/*! pdoc */:root{--pdoc-background:#212529;}.pdoc{--text:#f7f7f7;--muted:#9d9d9d;--link:#58a6ff;--link-hover:#3989ff;--code:#333;--active:#555;--accent:#343434;--accent2:#555;--nav-hover:rgba(0, 0, 0, 0.1);--name:#77C1FF;--def:#0cdd0c;--annotation:#00c037;}body{background-color:var(--pdoc-background);}html, body{width:100%;height:100%;}@media (max-width:769px){#navtoggle{cursor:pointer;position:absolute;width:50px;height:40px;top:1rem;right:1rem;border-color:var(--text);color:var(--text);display:flex;opacity:0.8;}#navtoggle:hover{opacity:1;}#togglestate + div{display:none;}#togglestate:checked + div{display:inherit;}main, header{padding:2rem 3vw;}.git-button{display:none !important;}nav input[type="search"]:valid ~ *{display:none !important;}}@media (min-width:770px){:root{--sidebar-width:clamp(12.5rem, 28vw, 22rem);}nav{position:fixed;overflow:auto;height:100vh;width:var(--sidebar-width);}main, header{padding:3rem 2rem 3rem calc(var(--sidebar-width) + 3rem);width:calc(54rem + var(--sidebar-width));max-width:100%;}#navtoggle{display:none;}}#togglestate{display:none;}nav.pdoc{--pad:1.75rem;--indent:1.5rem;background-color:var(--accent);border-right:1px solid var(--accent2);box-shadow:0 0 20px rgba(50, 50, 50, .2) inset;padding:0 0 0 var(--pad);overflow-wrap:anywhere;scrollbar-width:thin; scrollbar-color:var(--accent2) transparent }nav.pdoc::-webkit-scrollbar{width:.4rem; }nav.pdoc::-webkit-scrollbar-thumb{background-color:var(--accent2); }nav.pdoc > div{padding:var(--pad) 0;}nav.pdoc .module-list-button{display:inline-flex;align-items:center;color:var(--text);border-color:var(--muted);margin-bottom:1rem;}nav.pdoc .module-list-button:hover{border-color:var(--text);}nav.pdoc input[type=search]{display:block;outline-offset:0;width:calc(100% - var(--pad));}nav.pdoc .logo{max-width:calc(100% - var(--pad));max-height:35vh;display:block;margin:0 auto 1rem;transform:translate(calc(-.5 * var(--pad)), 0);}nav.pdoc ul{list-style:none;padding-left:0;}nav.pdoc li{display:block;margin:0;padding:.2rem 0 .2rem var(--indent);transition:all 100ms;}nav.pdoc > div > ul > li{padding-left:0;}nav.pdoc li:hover{background-color:var(--nav-hover);}nav.pdoc a, nav.pdoc a:hover{color:var(--text);}nav.pdoc a{display:block;}nav.pdoc > h2:first-of-type{margin-top:1.5rem;}nav.pdoc .class:before{content:"class ";color:var(--muted);}nav.pdoc .function:after{content:"()";color:var(--muted);}nav.pdoc footer:before{content:"";display:block;width:calc(100% - var(--pad));border-top:solid var(--accent2) 1px;margin-top:1.5rem;padding-top:.5rem;}nav.pdoc footer{font-size:small;}html, main{scroll-behavior:smooth;}.pdoc{color:var(--text);box-sizing:border-box;line-height:1.5;background:none;}.pdoc .pdoc-button{display:inline-block;border:solid black 1px;border-radius:2px;font-size:.75rem;padding:calc(0.5em - 1px) 1em;transition:100ms all;}.pdoc .visually-hidden{position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;margin:-1px !important;overflow:hidden !important;clip:rect(0, 0, 0, 0) !important;white-space:nowrap !important;border:0 !important;}.pdoc h1, .pdoc h2, .pdoc h3{font-weight:300;margin:.3em 0;padding:.2em 0;}.pdoc a{text-decoration:none;color:var(--link);}.pdoc a:hover{color:var(--link-hover);}.pdoc blockquote{margin-left:2rem;}.pdoc pre{background-color:var(--code);border-top:1px solid var(--accent2);border-bottom:1px solid var(--accent2);margin-bottom:1em;padding:.5rem 0 .5rem .5rem;overflow-x:auto;}.pdoc code{color:var(--text);padding:.2em .4em;margin:0;font-size:85%;background-color:var(--code);border-radius:6px;}.pdoc a > code{color:inherit;}.pdoc pre > code{display:inline-block;font-size:inherit;background:none;border:none;padding:0;}.pdoc .modulename{margin-top:0;font-weight:bold;}.pdoc .modulename a{color:var(--link);transition:100ms all;}.pdoc .git-button{float:right;border:solid var(--link) 1px;}.pdoc .git-button:hover{background-color:var(--link);color:var(--pdoc-background);}.pdoc details{--shift:-40px;text-align:right;margin-top:var(--shift);margin-bottom:calc(0px - var(--shift));clear:both;filter:opacity(1);}.pdoc details:not([open]){height:0;overflow:visible;}.pdoc details > summary{font-size:.75rem;cursor:pointer;color:var(--muted);border-width:0;padding:0 .7em;display:inline-block;display:inline list-item;user-select:none;}.pdoc details > summary:focus{outline:0;}.pdoc details > div{margin-top:calc(0px - var(--shift) / 2);text-align:left;}.pdoc .docstring{margin-bottom:1.5rem;}.pdoc > section:first-of-type > .docstring{margin-bottom:3rem;}.pdoc .docstring pre{margin-left:1em;margin-right:1em;}.pdoc h1:target,.pdoc h2:target,.pdoc h3:target,.pdoc h4:target,.pdoc h5:target,.pdoc h6:target{background-color:var(--active);box-shadow:-1rem 0 0 0 var(--active);}.pdoc div:target > .attr,.pdoc section:target > .attr,.pdoc dd:target > a{background-color:var(--active);}.pdoc .attr:hover{filter:contrast(0.95);}.pdoc .headerlink{position:absolute;width:0;margin-left:-1.5rem;line-height:1.4rem;font-size:1.5rem;font-weight:normal;transition:all 100ms ease-in-out;opacity:0;}.pdoc .attr > .headerlink{margin-left:-2.5rem;}.pdoc *:hover > .headerlink,.pdoc *:target > .attr > .headerlink{opacity:1;}.pdoc .attr{display:block;color:var(--text);margin:1rem 0 .5rem;padding:.4rem 5rem .4rem 1rem;background-color:var(--accent);}.pdoc .classattr{margin-left:2rem;}.pdoc .name{color:var(--name);font-weight:bold;}.pdoc .def{color:var(--def);font-weight:bold;}.pdoc .signature{white-space:pre-wrap;}.pdoc .annotation{color:var(--annotation);}.pdoc .inherited{margin-left:2rem;}.pdoc .inherited dt{font-weight:700;}.pdoc .inherited dt, .pdoc .inherited dd{display:inline;margin-left:0;margin-bottom:.5rem;}.pdoc .inherited dd:not(:last-child):after{content:", ";}.pdoc .inherited .class:before{content:"class ";}.pdoc .inherited .function a:after{content:"()";}.pdoc .search-result .docstring{overflow:auto;max-height:25vh;}.pdoc .search-result.focused > .attr{background-color:var(--active);}.pdoc .attribution{margin-top:2rem;display:block;opacity:0.5;transition:all 200ms;filter:grayscale(100%);}.pdoc .attribution:hover{opacity:1;filter:grayscale(0%);}.pdoc .attribution img{margin-left:5px;height:35px;vertical-align:middle;width:70px;transition:all 200ms;}</style>
+</head>
+<body>        <nav class="pdoc">
+            <label id="navtoggle" for="togglestate" class="pdoc-button"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke-linecap='round' stroke="currentColor" stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg></label>
+            <input id="togglestate" type="checkbox">
+            <div>
+                        <a class="pdoc-button module-list-button" href="../presets.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+  <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+</svg>                            &nbsp;nori_ui.presets</a>
+
+<a href="&#34;https://github.com/amorphousWaste/nori_ui&#34;">                        <img src="&#34;https://github.com/amorphousWaste/nori_ui/blob/main/images/icon_small.png&#34;" class="logo" alt="project logo"/>
+</a>
+                        <input type="search" placeholder="Search..." role="searchbox" aria-label="search"
+                               pattern=".+" required>
+
+
+
+                    <h2>API Documentation</h2>
+                        <ul class="memberlist">
+            <li>
+                    <a class="class" href="#NDialog">NDialog</a>
+                            <ul class="memberlist">
+                        <li>
+                                <a class="function" href="#NDialog.__init__">NDialog</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#NDialog.DEFAULT_MESSAGE_ICON">DEFAULT_MESSAGE_ICON</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#NDialog.create_dialog">create_dialog</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#NDialog.add_dialog_widget">add_dialog_widget</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#NDialog.add_ok_button">add_ok_button</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#NDialog.ok_button_clicked">ok_button_clicked</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#NDialog.staticMetaObject">staticMetaObject</a>
+                        </li>
+                </ul>
+
+            </li>
+            <li>
+                    <a class="class" href="#NErrorDialog">NErrorDialog</a>
+                            <ul class="memberlist">
+                        <li>
+                                <a class="function" href="#NErrorDialog.__init__">NErrorDialog</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#NErrorDialog.create_error_widget">create_error_widget</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#NErrorDialog.staticMetaObject">staticMetaObject</a>
+                        </li>
+                </ul>
+
+            </li>
+    </ul>
+
+
+
+                    <a class="attribution" title="pdoc: Python API documentation generator" href="https://pdoc.dev">
+                        built with <span class="visually-hidden">pdoc</span><img
+                            alt="pdoc logo"
+                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20role%3D%22img%22%20aria-label%3D%22pdoc%20logo%22%20width%3D%22300%22%20height%3D%22150%22%20viewBox%3D%22-1%200%2060%2030%22%3E%3Ctitle%3Epdoc%3C/title%3E%3Cpath%20d%3D%22M29.621%2021.293c-.011-.273-.214-.475-.511-.481a.5.5%200%200%200-.489.503l-.044%201.393c-.097.551-.695%201.215-1.566%201.704-.577.428-1.306.486-2.193.182-1.426-.617-2.467-1.654-3.304-2.487l-.173-.172a3.43%203.43%200%200%200-.365-.306.49.49%200%200%200-.286-.196c-1.718-1.06-4.931-1.47-7.353.191l-.219.15c-1.707%201.187-3.413%202.131-4.328%201.03-.02-.027-.49-.685-.141-1.763.233-.721.546-2.408.772-4.076.042-.09.067-.187.046-.288.166-1.347.277-2.625.241-3.351%201.378-1.008%202.271-2.586%202.271-4.362%200-.976-.272-1.935-.788-2.774-.057-.094-.122-.18-.184-.268.033-.167.052-.339.052-.516%200-1.477-1.202-2.679-2.679-2.679-.791%200-1.496.352-1.987.9a6.3%206.3%200%200%200-1.001.029c-.492-.564-1.207-.929-2.012-.929-1.477%200-2.679%201.202-2.679%202.679A2.65%202.65%200%200%200%20.97%206.554c-.383.747-.595%201.572-.595%202.41%200%202.311%201.507%204.29%203.635%205.107-.037.699-.147%202.27-.423%203.294l-.137.461c-.622%202.042-2.515%208.257%201.727%2010.643%201.614.908%203.06%201.248%204.317%201.248%202.665%200%204.492-1.524%205.322-2.401%201.476-1.559%202.886-1.854%206.491.82%201.877%201.393%203.514%201.753%204.861%201.068%202.223-1.713%202.811-3.867%203.399-6.374.077-.846.056-1.469.054-1.537zm-4.835%204.313c-.054.305-.156.586-.242.629-.034-.007-.131-.022-.307-.157-.145-.111-.314-.478-.456-.908.221.121.432.25.675.355.115.039.219.051.33.081zm-2.251-1.238c-.05.33-.158.648-.252.694-.022.001-.125-.018-.307-.157-.217-.166-.488-.906-.639-1.573.358.344.754.693%201.198%201.036zm-3.887-2.337c-.006-.116-.018-.231-.041-.342.635.145%201.189.368%201.599.625.097.231.166.481.174.642-.03.049-.055.101-.067.158-.046.013-.128.026-.298.004-.278-.037-.901-.57-1.367-1.087zm-1.127-.497c.116.306.176.625.12.71-.019.014-.117.045-.345.016-.206-.027-.604-.332-.986-.695.41-.051.816-.056%201.211-.031zm-4.535%201.535c.209.22.379.47.358.598-.006.041-.088.138-.351.234-.144.055-.539-.063-.979-.259a11.66%2011.66%200%200%200%20.972-.573zm.983-.664c.359-.237.738-.418%201.126-.554.25.237.479.548.457.694-.006.042-.087.138-.351.235-.174.064-.694-.105-1.232-.375zm-3.381%201.794c-.022.145-.061.29-.149.401-.133.166-.358.248-.69.251h-.002c-.133%200-.306-.26-.45-.621.417.091.854.07%201.291-.031zm-2.066-8.077a4.78%204.78%200%200%201-.775-.584c.172-.115.505-.254.88-.378l-.105.962zm-.331%202.302a10.32%2010.32%200%200%201-.828-.502c.202-.143.576-.328.984-.49l-.156.992zm-.45%202.157l-.701-.403c.214-.115.536-.249.891-.376a11.57%2011.57%200%200%201-.19.779zm-.181%201.716c.064.398.194.702.298.893-.194-.051-.435-.162-.736-.398.061-.119.224-.3.438-.495zM8.87%204.141c0%20.152-.123.276-.276.276s-.275-.124-.275-.276.123-.276.276-.276.275.124.275.276zm-.735-.389a1.15%201.15%200%200%200-.314.783%201.16%201.16%200%200%200%201.162%201.162c.457%200%20.842-.27%201.032-.653.026.117.042.238.042.362a1.68%201.68%200%200%201-1.679%201.679%201.68%201.68%200%200%201-1.679-1.679c0-.843.626-1.535%201.436-1.654zM5.059%205.406A1.68%201.68%200%200%201%203.38%207.085a1.68%201.68%200%200%201-1.679-1.679c0-.037.009-.072.011-.109.21.3.541.508.935.508a1.16%201.16%200%200%200%201.162-1.162%201.14%201.14%200%200%200-.474-.912c.015%200%20.03-.005.045-.005.926.001%201.679.754%201.679%201.68zM3.198%204.141c0%20.152-.123.276-.276.276s-.275-.124-.275-.276.123-.276.276-.276.275.124.275.276zM1.375%208.964c0-.52.103-1.035.288-1.52.466.394%201.06.64%201.717.64%201.144%200%202.116-.725%202.499-1.738.383%201.012%201.355%201.738%202.499%201.738.867%200%201.631-.421%202.121-1.062.307.605.478%201.267.478%201.942%200%202.486-2.153%204.51-4.801%204.51s-4.801-2.023-4.801-4.51zm24.342%2019.349c-.985.498-2.267.168-3.813-.979-3.073-2.281-5.453-3.199-7.813-.705-1.315%201.391-4.163%203.365-8.423.97-3.174-1.786-2.239-6.266-1.261-9.479l.146-.492c.276-1.02.395-2.457.444-3.268a6.11%206.11%200%200%200%201.18.115%206.01%206.01%200%200%200%202.536-.562l-.006.175c-.802.215-1.848.612-2.021%201.25-.079.295.021.601.274.837.219.203.415.364.598.501-.667.304-1.243.698-1.311%201.179-.02.144-.022.507.393.787.213.144.395.26.564.365-1.285.521-1.361.96-1.381%201.126-.018.142-.011.496.427.746l.854.489c-.473.389-.971.914-.999%201.429-.018.278.095.532.316.713.675.556%201.231.721%201.653.721.059%200%20.104-.014.158-.02.207.707.641%201.64%201.513%201.64h.013c.8-.008%201.236-.345%201.462-.626.173-.216.268-.457.325-.692.424.195.93.374%201.372.374.151%200%20.294-.021.423-.068.732-.27.944-.704.993-1.021.009-.061.003-.119.002-.179.266.086.538.147.789.147.15%200%20.294-.021.423-.069.542-.2.797-.489.914-.754.237.147.478.258.704.288.106.014.205.021.296.021.356%200%20.595-.101.767-.229.438.435%201.094.992%201.656%201.067.106.014.205.021.296.021a1.56%201.56%200%200%200%20.323-.035c.17.575.453%201.289.866%201.605.358.273.665.362.914.362a.99.99%200%200%200%20.421-.093%201.03%201.03%200%200%200%20.245-.164c.168.428.39.846.68%201.068.358.273.665.362.913.362a.99.99%200%200%200%20.421-.093c.317-.148.512-.448.639-.762.251.157.495.257.726.257.127%200%20.25-.024.37-.071.427-.17.706-.617.841-1.314.022-.015.047-.022.068-.038.067-.051.133-.104.196-.159-.443%201.486-1.107%202.761-2.086%203.257zM8.66%209.925a.5.5%200%201%200-1%200c0%20.653-.818%201.205-1.787%201.205s-1.787-.552-1.787-1.205a.5.5%200%201%200-1%200c0%201.216%201.25%202.205%202.787%202.205s2.787-.989%202.787-2.205zm4.4%2015.965l-.208.097c-2.661%201.258-4.708%201.436-6.086.527-1.542-1.017-1.88-3.19-1.844-4.198a.4.4%200%200%200-.385-.414c-.242-.029-.406.164-.414.385-.046%201.249.367%203.686%202.202%204.896.708.467%201.547.7%202.51.7%201.248%200%202.706-.392%204.362-1.174l.185-.086a.4.4%200%200%200%20.205-.527c-.089-.204-.326-.291-.527-.206zM9.547%202.292c.093.077.205.114.317.114a.5.5%200%200%200%20.318-.886L8.817.397a.5.5%200%200%200-.703.068.5.5%200%200%200%20.069.703l1.364%201.124zm-7.661-.065c.086%200%20.173-.022.253-.068l1.523-.893a.5.5%200%200%200-.506-.863l-1.523.892a.5.5%200%200%200-.179.685c.094.158.261.247.432.247z%22%20transform%3D%22matrix%28-1%200%200%201%2058%200%29%22%20fill%3D%22%233bb300%22/%3E%3Cpath%20d%3D%22M.3%2021.86V10.18q0-.46.02-.68.04-.22.18-.5.28-.54%201.34-.54%201.06%200%201.42.28.38.26.44.78.76-1.04%202.38-1.04%201.64%200%203.1%201.54%201.46%201.54%201.46%203.58%200%202.04-1.46%203.58-1.44%201.54-3.08%201.54-1.64%200-2.38-.92v4.04q0%20.46-.04.68-.02.22-.18.5-.14.3-.5.42-.36.12-.98.12-.62%200-1-.12-.36-.12-.52-.4-.14-.28-.18-.5-.02-.22-.02-.68zm3.96-9.42q-.46.54-.46%201.18%200%20.64.46%201.18.48.52%201.2.52.74%200%201.24-.52.52-.52.52-1.18%200-.66-.48-1.18-.48-.54-1.26-.54-.76%200-1.22.54zm14.741-8.36q.16-.3.54-.42.38-.12%201-.12.64%200%201.02.12.38.12.52.42.16.3.18.54.04.22.04.68v11.94q0%20.46-.04.7-.02.22-.18.5-.3.54-1.7.54-1.38%200-1.54-.98-.84.96-2.34.96-1.8%200-3.28-1.56-1.48-1.58-1.48-3.66%200-2.1%201.48-3.68%201.5-1.58%203.28-1.58%201.48%200%202.3%201v-4.2q0-.46.02-.68.04-.24.18-.52zm-3.24%2010.86q.52.54%201.26.54.74%200%201.22-.54.5-.54.5-1.18%200-.66-.48-1.22-.46-.56-1.26-.56-.8%200-1.28.56-.48.54-.48%201.2%200%20.66.52%201.2zm7.833-1.2q0-2.4%201.68-3.96%201.68-1.56%203.84-1.56%202.16%200%203.82%201.56%201.66%201.54%201.66%203.94%200%201.66-.86%202.96-.86%201.28-2.1%201.9-1.22.6-2.54.6-1.32%200-2.56-.64-1.24-.66-2.1-1.92-.84-1.28-.84-2.88zm4.18%201.44q.64.48%201.3.48.66%200%201.32-.5.66-.5.66-1.48%200-.98-.62-1.46-.62-.48-1.34-.48-.72%200-1.34.5-.62.5-.62%201.48%200%20.96.64%201.46zm11.412-1.44q0%20.84.56%201.32.56.46%201.18.46.64%200%201.18-.36.56-.38.9-.38.6%200%201.46%201.06.46.58.46%201.04%200%20.76-1.1%201.42-1.14.8-2.8.8-1.86%200-3.58-1.34-.82-.64-1.34-1.7-.52-1.08-.52-2.36%200-1.3.52-2.34.52-1.06%201.34-1.7%201.66-1.32%203.54-1.32.76%200%201.48.22.72.2%201.06.4l.32.2q.36.24.56.38.52.4.52.92%200%20.5-.42%201.14-.72%201.1-1.38%201.1-.38%200-1.08-.44-.36-.34-1.04-.34-.66%200-1.24.48-.58.48-.58%201.34z%22%20fill%3D%22green%22/%3E%3C/svg%3E"/>
+                    </a>
+            </div>
+        </nav>
+    <main class="pdoc">
+            <section>
+                    <h1 class="modulename">
+<a href="./../../nori_ui.html">nori_ui</a><wbr>.<a href="./../presets.html">presets</a><wbr>.dialogs    </h1>
+
+                        <div class="docstring"><p>Dialog template.</p>
+</div>
+
+                        <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;Dialog template.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtWidgets</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="kn">import</span> <span class="nn">nori</span>
+<span class="kn">import</span> <span class="nn">utils</span>
+
+
+<span class="k">class</span> <span class="nc">NDialog</span><span class="p">(</span><span class="n">nori</span><span class="o">.</span><span class="n">Nori</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Dialog class.&quot;&quot;&quot;</span>
+
+    <span class="n">DEFAULT_MESSAGE_ICON</span> <span class="o">=</span> <span class="s1">&#39;alert-circle-outline.png&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parent</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message_icon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">widget</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">style</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">palette</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create a dialog based on Nori.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            parent (QObject): The parent object.</span>
+<span class="sd">            title (str): The title of the dialog.</span>
+<span class="sd">            message_icon (str): The name of the icon to use with the message.</span>
+<span class="sd">            message (str): Message to display in the dialog.</span>
+<span class="sd">            widget (QWidget): A custom widget to add to the dialog.</span>
+<span class="sd">            style (str): The name of the stylesheet to use.</span>
+<span class="sd">                If nothing is provided, a default is used.</span>
+<span class="sd">                &#39;none&#39; can also be provided to not apply any styling.</span>
+<span class="sd">                    In the case of a child window, it will inherit the parents</span>
+<span class="sd">                    style and palette.</span>
+<span class="sd">            palette (str): The name of the palette to use.</span>
+<span class="sd">                If none is provided, a default is used.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">style</span> <span class="ow">or</span> <span class="s1">&#39;none&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">palette</span> <span class="o">=</span> <span class="n">palette</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">NDialog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+            <span class="n">as_popup</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">palette</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">palette</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_TITLE</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_icon</span> <span class="o">=</span> <span class="n">message_icon</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_MESSAGE_ICON</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="n">widget</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_dialog</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">setFocus</span><span class="p">()</span>
+
+        <span class="n">utils</span><span class="o">.</span><span class="n">move_to_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">create_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create the dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="n">message_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">icon_label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">()</span>
+        <span class="n">icon</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_pixmap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_icon</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">icon</span><span class="p">:</span>
+            <span class="n">icon_label</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span>
+                <span class="n">icon</span><span class="o">.</span><span class="n">scaledToWidth</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">SmoothTransformation</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">message_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">icon_label</span><span class="p">)</span>
+
+        <span class="n">message_label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setTextInteractionFlags</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">TextSelectableByMouse</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setWordWrap</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span>
+            <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignCenter</span> <span class="o">|</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignVCenter</span>
+        <span class="p">)</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">message_label</span><span class="p">)</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">message_layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_dialog_widget</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">h_line</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="p">()</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s1">&#39;button_seperator&#39;</span><span class="p">)</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setFrameShape</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">HLine</span><span class="p">)</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setFrameShadow</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">Sunken</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">h_line</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_ok_button</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="p">)</span>
+
+        <span class="n">utils</span><span class="o">.</span><span class="n">move_to_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_dialog_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add the user-defined widget to the dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_ok_button</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add the &#39;OK&#39; button.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ok_button_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">ok_button_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Close the window when the &#39;OK&#39; button is clicked.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">NErrorDialog</span><span class="p">(</span><span class="n">NDialog</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Error dialog class.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parent</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">failure_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create an error dialog based on the MDialog class.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NErrorDialog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+            <span class="n">message_icon</span><span class="o">=</span><span class="s1">&#39;alert-octagon-outline.png&#39;</span><span class="p">,</span>
+            <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="ow">or</span> <span class="s1">&#39;Error&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="ow">or</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">failure_message</span> <span class="o">=</span> <span class="n">failure_message</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_error_widget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_dialog_widget</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_error_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create the error widget.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QTextEdit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span>
+            <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">failure_message</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</pre></div>
+
+        </details>
+
+            </section>
+                <section id="NDialog">
+                                <div class="attr class">
+        <a class="headerlink" href="#NDialog">#&nbsp;&nbsp</a>
+
+        
+        <span class="def">class</span>
+        <span class="name">NDialog</span><wbr>(<span class="base">nori.Nori</span>):
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">NDialog</span><span class="p">(</span><span class="n">nori</span><span class="o">.</span><span class="n">Nori</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Dialog class.&quot;&quot;&quot;</span>
+
+    <span class="n">DEFAULT_MESSAGE_ICON</span> <span class="o">=</span> <span class="s1">&#39;alert-circle-outline.png&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parent</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message_icon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">widget</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">style</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">palette</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create a dialog based on Nori.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            parent (QObject): The parent object.</span>
+<span class="sd">            title (str): The title of the dialog.</span>
+<span class="sd">            message_icon (str): The name of the icon to use with the message.</span>
+<span class="sd">            message (str): Message to display in the dialog.</span>
+<span class="sd">            widget (QWidget): A custom widget to add to the dialog.</span>
+<span class="sd">            style (str): The name of the stylesheet to use.</span>
+<span class="sd">                If nothing is provided, a default is used.</span>
+<span class="sd">                &#39;none&#39; can also be provided to not apply any styling.</span>
+<span class="sd">                    In the case of a child window, it will inherit the parents</span>
+<span class="sd">                    style and palette.</span>
+<span class="sd">            palette (str): The name of the palette to use.</span>
+<span class="sd">                If none is provided, a default is used.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">style</span> <span class="ow">or</span> <span class="s1">&#39;none&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">palette</span> <span class="o">=</span> <span class="n">palette</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">NDialog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+            <span class="n">as_popup</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">palette</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">palette</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_TITLE</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_icon</span> <span class="o">=</span> <span class="n">message_icon</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_MESSAGE_ICON</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="n">widget</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_dialog</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">setFocus</span><span class="p">()</span>
+
+        <span class="n">utils</span><span class="o">.</span><span class="n">move_to_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">create_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create the dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="n">message_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">icon_label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">()</span>
+        <span class="n">icon</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_pixmap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_icon</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">icon</span><span class="p">:</span>
+            <span class="n">icon_label</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span>
+                <span class="n">icon</span><span class="o">.</span><span class="n">scaledToWidth</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">SmoothTransformation</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">message_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">icon_label</span><span class="p">)</span>
+
+        <span class="n">message_label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setTextInteractionFlags</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">TextSelectableByMouse</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setWordWrap</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span>
+            <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignCenter</span> <span class="o">|</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignVCenter</span>
+        <span class="p">)</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">message_label</span><span class="p">)</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">message_layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_dialog_widget</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">h_line</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="p">()</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s1">&#39;button_seperator&#39;</span><span class="p">)</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setFrameShape</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">HLine</span><span class="p">)</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setFrameShadow</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">Sunken</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">h_line</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_ok_button</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="p">)</span>
+
+        <span class="n">utils</span><span class="o">.</span><span class="n">move_to_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_dialog_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add the user-defined widget to the dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_ok_button</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add the &#39;OK&#39; button.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ok_button_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">ok_button_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Close the window when the &#39;OK&#39; button is clicked.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>QMainWindow(self, parent: Optional[PySide6.QtWidgets.QWidget] = None, flags: PySide6.QtCore.Qt.WindowFlags = Default(Qt.WindowFlags)) -> None</p>
+</div>
+
+
+                            <div id="NDialog.__init__" class="classattr">
+                                        <div class="attr function"><a class="headerlink" href="#NDialog.__init__">#&nbsp;&nbsp</a>
+
+        
+            <span class="name">NDialog</span><span class="signature">(
+    parent: Optional[PySide6.QtWidgets.QWidget] = None,
+    title: Optional[str] = None,
+    message_icon: Optional[str] = None,
+    message: Optional[str] = None,
+    widget: Optional[PySide6.QtWidgets.QWidget] = None,
+    style: Optional[str] = None,
+    palette: Optional[str] = None
+)</span>
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parent</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message_icon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">widget</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">style</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">palette</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create a dialog based on Nori.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            parent (QObject): The parent object.</span>
+<span class="sd">            title (str): The title of the dialog.</span>
+<span class="sd">            message_icon (str): The name of the icon to use with the message.</span>
+<span class="sd">            message (str): Message to display in the dialog.</span>
+<span class="sd">            widget (QWidget): A custom widget to add to the dialog.</span>
+<span class="sd">            style (str): The name of the stylesheet to use.</span>
+<span class="sd">                If nothing is provided, a default is used.</span>
+<span class="sd">                &#39;none&#39; can also be provided to not apply any styling.</span>
+<span class="sd">                    In the case of a child window, it will inherit the parents</span>
+<span class="sd">                    style and palette.</span>
+<span class="sd">            palette (str): The name of the palette to use.</span>
+<span class="sd">                If none is provided, a default is used.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">style</span> <span class="ow">or</span> <span class="s1">&#39;none&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">palette</span> <span class="o">=</span> <span class="n">palette</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">NDialog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+            <span class="n">as_popup</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">palette</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">palette</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_TITLE</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_icon</span> <span class="o">=</span> <span class="n">message_icon</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_MESSAGE_ICON</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="n">widget</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_dialog</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">setFocus</span><span class="p">()</span>
+
+        <span class="n">utils</span><span class="o">.</span><span class="n">move_to_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>Create a dialog based on Nori.</p>
+
+<p>Args:
+    parent (QObject): The parent object.
+    title (str): The title of the dialog.
+    message_icon (str): The name of the icon to use with the message.
+    message (str): Message to display in the dialog.
+    widget (QWidget): A custom widget to add to the dialog.
+    style (str): The name of the stylesheet to use.
+        If nothing is provided, a default is used.
+        'none' can also be provided to not apply any styling.
+            In the case of a child window, it will inherit the parents
+            style and palette.
+    palette (str): The name of the palette to use.
+        If none is provided, a default is used.</p>
+
+<p>Returns:
+    None</p>
+</div>
+
+
+                            </div>
+                            <div id="NDialog.DEFAULT_MESSAGE_ICON" class="classattr">
+                                            <div class="attr variable"><a class="headerlink" href="#NDialog.DEFAULT_MESSAGE_ICON">#&nbsp;&nbsp</a>
+
+        <span class="name">DEFAULT_MESSAGE_ICON</span><span class="default_value"> = &#39;alert-circle-outline.png&#39;</span>
+    </div>
+
+    
+
+                            </div>
+                            <div id="NDialog.create_dialog" class="classattr">
+                                        <div class="attr function"><a class="headerlink" href="#NDialog.create_dialog">#&nbsp;&nbsp</a>
+
+        
+            <span class="def">def</span>
+            <span class="name">create_dialog</span><span class="signature">(self) -&gt; None</span>:
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="nf">create_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create the dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="n">message_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">icon_label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">()</span>
+        <span class="n">icon</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_pixmap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_icon</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">icon</span><span class="p">:</span>
+            <span class="n">icon_label</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span>
+                <span class="n">icon</span><span class="o">.</span><span class="n">scaledToWidth</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">SmoothTransformation</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">message_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">icon_label</span><span class="p">)</span>
+
+        <span class="n">message_label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setTextInteractionFlags</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">TextSelectableByMouse</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setWordWrap</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">message_label</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span>
+            <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignCenter</span> <span class="o">|</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignVCenter</span>
+        <span class="p">)</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">message_label</span><span class="p">)</span>
+        <span class="n">message_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">message_layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_dialog_widget</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">h_line</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="p">()</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s1">&#39;button_seperator&#39;</span><span class="p">)</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setFrameShape</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">HLine</span><span class="p">)</span>
+        <span class="n">h_line</span><span class="o">.</span><span class="n">setFrameShadow</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">Sunken</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">h_line</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_ok_button</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">central_layout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">central_widget</span><span class="p">)</span>
+
+        <span class="n">utils</span><span class="o">.</span><span class="n">move_to_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>Create the dialog.</p>
+</div>
+
+
+                            </div>
+                            <div id="NDialog.add_dialog_widget" class="classattr">
+                                        <div class="attr function"><a class="headerlink" href="#NDialog.add_dialog_widget">#&nbsp;&nbsp</a>
+
+        
+            <span class="def">def</span>
+            <span class="name">add_dialog_widget</span><span class="signature">(self) -&gt; None</span>:
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="nf">add_dialog_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add the user-defined widget to the dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_widget_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="p">)</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>Add the user-defined widget to the dialog.</p>
+</div>
+
+
+                            </div>
+                            <div id="NDialog.add_ok_button" class="classattr">
+                                        <div class="attr function"><a class="headerlink" href="#NDialog.add_ok_button">#&nbsp;&nbsp</a>
+
+        
+            <span class="def">def</span>
+            <span class="name">add_ok_button</span><span class="signature">(self) -&gt; None</span>:
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="nf">add_ok_button</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add the &#39;OK&#39; button.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ok_button_clicked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ok_button</span><span class="p">)</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>Add the 'OK' button.</p>
+</div>
+
+
+                            </div>
+                            <div id="NDialog.ok_button_clicked" class="classattr">
+                                        <div class="attr function"><a class="headerlink" href="#NDialog.ok_button_clicked">#&nbsp;&nbsp</a>
+
+        
+            <span class="def">def</span>
+            <span class="name">ok_button_clicked</span><span class="signature">(self) -&gt; None</span>:
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="nf">ok_button_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Close the window when the &#39;OK&#39; button is clicked.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>Close the window when the 'OK' button is clicked.</p>
+</div>
+
+
+                            </div>
+                            <div id="NDialog.staticMetaObject" class="classattr">
+                                            <div class="attr variable"><a class="headerlink" href="#NDialog.staticMetaObject">#&nbsp;&nbsp</a>
+
+        <span class="name">staticMetaObject</span><span class="default_value"> = PySide6.QtCore.QMetaObject(&#34;NDialog&#34; inherits &#34;Nori&#34;:
+)</span>
+    </div>
+
+    
+
+                            </div>
+                            <div class="inherited">
+                                <h5>Inherited Members</h5>
+                                <dl>
+                                    <div><dt>PySide6.QtWidgets.QWidget</dt>
+                                <dd id="NDialog.style" class="function">style</dd>
+                <dd id="NDialog.palette" class="function">palette</dd>
+                <dd id="NDialog.acceptDrops" class="function">acceptDrops</dd>
+                <dd id="NDialog.accessibleDescription" class="function">accessibleDescription</dd>
+                <dd id="NDialog.accessibleName" class="function">accessibleName</dd>
+                <dd id="NDialog.actionEvent" class="function">actionEvent</dd>
+                <dd id="NDialog.actions" class="function">actions</dd>
+                <dd id="NDialog.activateWindow" class="function">activateWindow</dd>
+                <dd id="NDialog.addAction" class="function">addAction</dd>
+                <dd id="NDialog.addActions" class="function">addActions</dd>
+                <dd id="NDialog.adjustSize" class="function">adjustSize</dd>
+                <dd id="NDialog.autoFillBackground" class="function">autoFillBackground</dd>
+                <dd id="NDialog.backgroundRole" class="function">backgroundRole</dd>
+                <dd id="NDialog.backingStore" class="function">backingStore</dd>
+                <dd id="NDialog.baseSize" class="function">baseSize</dd>
+                <dd id="NDialog.changeEvent" class="function">changeEvent</dd>
+                <dd id="NDialog.childAt" class="function">childAt</dd>
+                <dd id="NDialog.childrenRect" class="function">childrenRect</dd>
+                <dd id="NDialog.childrenRegion" class="function">childrenRegion</dd>
+                <dd id="NDialog.clearFocus" class="function">clearFocus</dd>
+                <dd id="NDialog.clearMask" class="function">clearMask</dd>
+                <dd id="NDialog.close" class="function">close</dd>
+                <dd id="NDialog.contentsMargins" class="function">contentsMargins</dd>
+                <dd id="NDialog.contentsRect" class="function">contentsRect</dd>
+                <dd id="NDialog.contextMenuPolicy" class="function">contextMenuPolicy</dd>
+                <dd id="NDialog.create" class="function">create</dd>
+                <dd id="NDialog.createWinId" class="function">createWinId</dd>
+                <dd id="NDialog.createWindowContainer" class="function">createWindowContainer</dd>
+                <dd id="NDialog.cursor" class="function">cursor</dd>
+                <dd id="NDialog.destroy" class="function">destroy</dd>
+                <dd id="NDialog.devType" class="function">devType</dd>
+                <dd id="NDialog.dragEnterEvent" class="function">dragEnterEvent</dd>
+                <dd id="NDialog.dragLeaveEvent" class="function">dragLeaveEvent</dd>
+                <dd id="NDialog.dragMoveEvent" class="function">dragMoveEvent</dd>
+                <dd id="NDialog.dropEvent" class="function">dropEvent</dd>
+                <dd id="NDialog.effectiveWinId" class="function">effectiveWinId</dd>
+                <dd id="NDialog.ensurePolished" class="function">ensurePolished</dd>
+                <dd id="NDialog.enterEvent" class="function">enterEvent</dd>
+                <dd id="NDialog.find" class="function">find</dd>
+                <dd id="NDialog.focusInEvent" class="function">focusInEvent</dd>
+                <dd id="NDialog.focusNextChild" class="function">focusNextChild</dd>
+                <dd id="NDialog.focusNextPrevChild" class="function">focusNextPrevChild</dd>
+                <dd id="NDialog.focusOutEvent" class="function">focusOutEvent</dd>
+                <dd id="NDialog.focusPolicy" class="function">focusPolicy</dd>
+                <dd id="NDialog.focusPreviousChild" class="function">focusPreviousChild</dd>
+                <dd id="NDialog.focusProxy" class="function">focusProxy</dd>
+                <dd id="NDialog.focusWidget" class="function">focusWidget</dd>
+                <dd id="NDialog.font" class="function">font</dd>
+                <dd id="NDialog.fontInfo" class="function">fontInfo</dd>
+                <dd id="NDialog.fontMetrics" class="function">fontMetrics</dd>
+                <dd id="NDialog.foregroundRole" class="function">foregroundRole</dd>
+                <dd id="NDialog.frameGeometry" class="function">frameGeometry</dd>
+                <dd id="NDialog.frameSize" class="function">frameSize</dd>
+                <dd id="NDialog.geometry" class="function">geometry</dd>
+                <dd id="NDialog.grab" class="function">grab</dd>
+                <dd id="NDialog.grabGesture" class="function">grabGesture</dd>
+                <dd id="NDialog.grabKeyboard" class="function">grabKeyboard</dd>
+                <dd id="NDialog.grabMouse" class="function">grabMouse</dd>
+                <dd id="NDialog.grabShortcut" class="function">grabShortcut</dd>
+                <dd id="NDialog.graphicsEffect" class="function">graphicsEffect</dd>
+                <dd id="NDialog.graphicsProxyWidget" class="function">graphicsProxyWidget</dd>
+                <dd id="NDialog.hasFocus" class="function">hasFocus</dd>
+                <dd id="NDialog.hasHeightForWidth" class="function">hasHeightForWidth</dd>
+                <dd id="NDialog.hasMouseTracking" class="function">hasMouseTracking</dd>
+                <dd id="NDialog.hasTabletTracking" class="function">hasTabletTracking</dd>
+                <dd id="NDialog.height" class="function">height</dd>
+                <dd id="NDialog.heightForWidth" class="function">heightForWidth</dd>
+                <dd id="NDialog.hide" class="function">hide</dd>
+                <dd id="NDialog.hideEvent" class="function">hideEvent</dd>
+                <dd id="NDialog.initPainter" class="function">initPainter</dd>
+                <dd id="NDialog.inputMethodEvent" class="function">inputMethodEvent</dd>
+                <dd id="NDialog.inputMethodHints" class="function">inputMethodHints</dd>
+                <dd id="NDialog.inputMethodQuery" class="function">inputMethodQuery</dd>
+                <dd id="NDialog.insertAction" class="function">insertAction</dd>
+                <dd id="NDialog.insertActions" class="function">insertActions</dd>
+                <dd id="NDialog.internalWinId" class="function">internalWinId</dd>
+                <dd id="NDialog.isActiveWindow" class="function">isActiveWindow</dd>
+                <dd id="NDialog.isAncestorOf" class="function">isAncestorOf</dd>
+                <dd id="NDialog.isEnabled" class="function">isEnabled</dd>
+                <dd id="NDialog.isEnabledTo" class="function">isEnabledTo</dd>
+                <dd id="NDialog.isFullScreen" class="function">isFullScreen</dd>
+                <dd id="NDialog.isHidden" class="function">isHidden</dd>
+                <dd id="NDialog.isLeftToRight" class="function">isLeftToRight</dd>
+                <dd id="NDialog.isMaximized" class="function">isMaximized</dd>
+                <dd id="NDialog.isMinimized" class="function">isMinimized</dd>
+                <dd id="NDialog.isModal" class="function">isModal</dd>
+                <dd id="NDialog.isRightToLeft" class="function">isRightToLeft</dd>
+                <dd id="NDialog.isTopLevel" class="function">isTopLevel</dd>
+                <dd id="NDialog.isVisible" class="function">isVisible</dd>
+                <dd id="NDialog.isVisibleTo" class="function">isVisibleTo</dd>
+                <dd id="NDialog.isWindow" class="function">isWindow</dd>
+                <dd id="NDialog.isWindowModified" class="function">isWindowModified</dd>
+                <dd id="NDialog.keyReleaseEvent" class="function">keyReleaseEvent</dd>
+                <dd id="NDialog.keyboardGrabber" class="function">keyboardGrabber</dd>
+                <dd id="NDialog.layout" class="function">layout</dd>
+                <dd id="NDialog.layoutDirection" class="function">layoutDirection</dd>
+                <dd id="NDialog.leaveEvent" class="function">leaveEvent</dd>
+                <dd id="NDialog.locale" class="function">locale</dd>
+                <dd id="NDialog.lower" class="function">lower</dd>
+                <dd id="NDialog.mapFrom" class="function">mapFrom</dd>
+                <dd id="NDialog.mapFromGlobal" class="function">mapFromGlobal</dd>
+                <dd id="NDialog.mapFromParent" class="function">mapFromParent</dd>
+                <dd id="NDialog.mapTo" class="function">mapTo</dd>
+                <dd id="NDialog.mapToGlobal" class="function">mapToGlobal</dd>
+                <dd id="NDialog.mapToParent" class="function">mapToParent</dd>
+                <dd id="NDialog.mask" class="function">mask</dd>
+                <dd id="NDialog.maximumHeight" class="function">maximumHeight</dd>
+                <dd id="NDialog.maximumSize" class="function">maximumSize</dd>
+                <dd id="NDialog.maximumWidth" class="function">maximumWidth</dd>
+                <dd id="NDialog.metric" class="function">metric</dd>
+                <dd id="NDialog.minimumHeight" class="function">minimumHeight</dd>
+                <dd id="NDialog.minimumSize" class="function">minimumSize</dd>
+                <dd id="NDialog.minimumSizeHint" class="function">minimumSizeHint</dd>
+                <dd id="NDialog.minimumWidth" class="function">minimumWidth</dd>
+                <dd id="NDialog.mouseDoubleClickEvent" class="function">mouseDoubleClickEvent</dd>
+                <dd id="NDialog.mouseGrabber" class="function">mouseGrabber</dd>
+                <dd id="NDialog.mouseMoveEvent" class="function">mouseMoveEvent</dd>
+                <dd id="NDialog.mousePressEvent" class="function">mousePressEvent</dd>
+                <dd id="NDialog.mouseReleaseEvent" class="function">mouseReleaseEvent</dd>
+                <dd id="NDialog.move" class="function">move</dd>
+                <dd id="NDialog.moveEvent" class="function">moveEvent</dd>
+                <dd id="NDialog.nativeEvent" class="function">nativeEvent</dd>
+                <dd id="NDialog.nativeParentWidget" class="function">nativeParentWidget</dd>
+                <dd id="NDialog.nextInFocusChain" class="function">nextInFocusChain</dd>
+                <dd id="NDialog.normalGeometry" class="function">normalGeometry</dd>
+                <dd id="NDialog.overrideWindowFlags" class="function">overrideWindowFlags</dd>
+                <dd id="NDialog.overrideWindowState" class="function">overrideWindowState</dd>
+                <dd id="NDialog.paintEngine" class="function">paintEngine</dd>
+                <dd id="NDialog.paintEvent" class="function">paintEvent</dd>
+                <dd id="NDialog.parentWidget" class="function">parentWidget</dd>
+                <dd id="NDialog.pos" class="function">pos</dd>
+                <dd id="NDialog.previousInFocusChain" class="function">previousInFocusChain</dd>
+                <dd id="NDialog.raise_" class="function">raise_</dd>
+                <dd id="NDialog.rect" class="function">rect</dd>
+                <dd id="NDialog.redirected" class="function">redirected</dd>
+                <dd id="NDialog.releaseKeyboard" class="function">releaseKeyboard</dd>
+                <dd id="NDialog.releaseMouse" class="function">releaseMouse</dd>
+                <dd id="NDialog.releaseShortcut" class="function">releaseShortcut</dd>
+                <dd id="NDialog.removeAction" class="function">removeAction</dd>
+                <dd id="NDialog.render" class="function">render</dd>
+                <dd id="NDialog.repaint" class="function">repaint</dd>
+                <dd id="NDialog.resize" class="function">resize</dd>
+                <dd id="NDialog.resizeEvent" class="function">resizeEvent</dd>
+                <dd id="NDialog.restoreGeometry" class="function">restoreGeometry</dd>
+                <dd id="NDialog.saveGeometry" class="function">saveGeometry</dd>
+                <dd id="NDialog.screen" class="function">screen</dd>
+                <dd id="NDialog.scroll" class="function">scroll</dd>
+                <dd id="NDialog.setAcceptDrops" class="function">setAcceptDrops</dd>
+                <dd id="NDialog.setAccessibleDescription" class="function">setAccessibleDescription</dd>
+                <dd id="NDialog.setAccessibleName" class="function">setAccessibleName</dd>
+                <dd id="NDialog.setAttribute" class="function">setAttribute</dd>
+                <dd id="NDialog.setAutoFillBackground" class="function">setAutoFillBackground</dd>
+                <dd id="NDialog.setBackgroundRole" class="function">setBackgroundRole</dd>
+                <dd id="NDialog.setBaseSize" class="function">setBaseSize</dd>
+                <dd id="NDialog.setContentsMargins" class="function">setContentsMargins</dd>
+                <dd id="NDialog.setContextMenuPolicy" class="function">setContextMenuPolicy</dd>
+                <dd id="NDialog.setCursor" class="function">setCursor</dd>
+                <dd id="NDialog.setDisabled" class="function">setDisabled</dd>
+                <dd id="NDialog.setEnabled" class="function">setEnabled</dd>
+                <dd id="NDialog.setFixedHeight" class="function">setFixedHeight</dd>
+                <dd id="NDialog.setFixedSize" class="function">setFixedSize</dd>
+                <dd id="NDialog.setFixedWidth" class="function">setFixedWidth</dd>
+                <dd id="NDialog.setFocus" class="function">setFocus</dd>
+                <dd id="NDialog.setFocusPolicy" class="function">setFocusPolicy</dd>
+                <dd id="NDialog.setFocusProxy" class="function">setFocusProxy</dd>
+                <dd id="NDialog.setFont" class="function">setFont</dd>
+                <dd id="NDialog.setForegroundRole" class="function">setForegroundRole</dd>
+                <dd id="NDialog.setGeometry" class="function">setGeometry</dd>
+                <dd id="NDialog.setGraphicsEffect" class="function">setGraphicsEffect</dd>
+                <dd id="NDialog.setHidden" class="function">setHidden</dd>
+                <dd id="NDialog.setInputMethodHints" class="function">setInputMethodHints</dd>
+                <dd id="NDialog.setLayout" class="function">setLayout</dd>
+                <dd id="NDialog.setLayoutDirection" class="function">setLayoutDirection</dd>
+                <dd id="NDialog.setLocale" class="function">setLocale</dd>
+                <dd id="NDialog.setMask" class="function">setMask</dd>
+                <dd id="NDialog.setMaximumHeight" class="function">setMaximumHeight</dd>
+                <dd id="NDialog.setMaximumSize" class="function">setMaximumSize</dd>
+                <dd id="NDialog.setMaximumWidth" class="function">setMaximumWidth</dd>
+                <dd id="NDialog.setMinimumHeight" class="function">setMinimumHeight</dd>
+                <dd id="NDialog.setMinimumSize" class="function">setMinimumSize</dd>
+                <dd id="NDialog.setMinimumWidth" class="function">setMinimumWidth</dd>
+                <dd id="NDialog.setMouseTracking" class="function">setMouseTracking</dd>
+                <dd id="NDialog.setPalette" class="function">setPalette</dd>
+                <dd id="NDialog.setParent" class="function">setParent</dd>
+                <dd id="NDialog.setScreen" class="function">setScreen</dd>
+                <dd id="NDialog.setShortcutAutoRepeat" class="function">setShortcutAutoRepeat</dd>
+                <dd id="NDialog.setShortcutEnabled" class="function">setShortcutEnabled</dd>
+                <dd id="NDialog.setSizeIncrement" class="function">setSizeIncrement</dd>
+                <dd id="NDialog.setSizePolicy" class="function">setSizePolicy</dd>
+                <dd id="NDialog.setStatusTip" class="function">setStatusTip</dd>
+                <dd id="NDialog.setStyle" class="function">setStyle</dd>
+                <dd id="NDialog.setStyleSheet" class="function">setStyleSheet</dd>
+                <dd id="NDialog.setTabOrder" class="function">setTabOrder</dd>
+                <dd id="NDialog.setTabletTracking" class="function">setTabletTracking</dd>
+                <dd id="NDialog.setToolTip" class="function">setToolTip</dd>
+                <dd id="NDialog.setToolTipDuration" class="function">setToolTipDuration</dd>
+                <dd id="NDialog.setUpdatesEnabled" class="function">setUpdatesEnabled</dd>
+                <dd id="NDialog.setVisible" class="function">setVisible</dd>
+                <dd id="NDialog.setWhatsThis" class="function">setWhatsThis</dd>
+                <dd id="NDialog.setWindowFilePath" class="function">setWindowFilePath</dd>
+                <dd id="NDialog.setWindowFlag" class="function">setWindowFlag</dd>
+                <dd id="NDialog.setWindowFlags" class="function">setWindowFlags</dd>
+                <dd id="NDialog.setWindowIcon" class="function">setWindowIcon</dd>
+                <dd id="NDialog.setWindowIconText" class="function">setWindowIconText</dd>
+                <dd id="NDialog.setWindowModality" class="function">setWindowModality</dd>
+                <dd id="NDialog.setWindowModified" class="function">setWindowModified</dd>
+                <dd id="NDialog.setWindowOpacity" class="function">setWindowOpacity</dd>
+                <dd id="NDialog.setWindowRole" class="function">setWindowRole</dd>
+                <dd id="NDialog.setWindowState" class="function">setWindowState</dd>
+                <dd id="NDialog.setWindowTitle" class="function">setWindowTitle</dd>
+                <dd id="NDialog.sharedPainter" class="function">sharedPainter</dd>
+                <dd id="NDialog.show" class="function">show</dd>
+                <dd id="NDialog.showEvent" class="function">showEvent</dd>
+                <dd id="NDialog.showFullScreen" class="function">showFullScreen</dd>
+                <dd id="NDialog.showMaximized" class="function">showMaximized</dd>
+                <dd id="NDialog.showMinimized" class="function">showMinimized</dd>
+                <dd id="NDialog.showNormal" class="function">showNormal</dd>
+                <dd id="NDialog.size" class="function">size</dd>
+                <dd id="NDialog.sizeHint" class="function">sizeHint</dd>
+                <dd id="NDialog.sizeIncrement" class="function">sizeIncrement</dd>
+                <dd id="NDialog.sizePolicy" class="function">sizePolicy</dd>
+                <dd id="NDialog.stackUnder" class="function">stackUnder</dd>
+                <dd id="NDialog.statusTip" class="function">statusTip</dd>
+                <dd id="NDialog.styleSheet" class="function">styleSheet</dd>
+                <dd id="NDialog.tabletEvent" class="function">tabletEvent</dd>
+                <dd id="NDialog.testAttribute" class="function">testAttribute</dd>
+                <dd id="NDialog.toolTip" class="function">toolTip</dd>
+                <dd id="NDialog.toolTipDuration" class="function">toolTipDuration</dd>
+                <dd id="NDialog.topLevelWidget" class="function">topLevelWidget</dd>
+                <dd id="NDialog.underMouse" class="function">underMouse</dd>
+                <dd id="NDialog.ungrabGesture" class="function">ungrabGesture</dd>
+                <dd id="NDialog.unsetCursor" class="function">unsetCursor</dd>
+                <dd id="NDialog.unsetLayoutDirection" class="function">unsetLayoutDirection</dd>
+                <dd id="NDialog.unsetLocale" class="function">unsetLocale</dd>
+                <dd id="NDialog.update" class="function">update</dd>
+                <dd id="NDialog.updateGeometry" class="function">updateGeometry</dd>
+                <dd id="NDialog.updateMicroFocus" class="function">updateMicroFocus</dd>
+                <dd id="NDialog.updatesEnabled" class="function">updatesEnabled</dd>
+                <dd id="NDialog.visibleRegion" class="function">visibleRegion</dd>
+                <dd id="NDialog.whatsThis" class="function">whatsThis</dd>
+                <dd id="NDialog.wheelEvent" class="function">wheelEvent</dd>
+                <dd id="NDialog.width" class="function">width</dd>
+                <dd id="NDialog.winId" class="function">winId</dd>
+                <dd id="NDialog.window" class="function">window</dd>
+                <dd id="NDialog.windowFilePath" class="function">windowFilePath</dd>
+                <dd id="NDialog.windowFlags" class="function">windowFlags</dd>
+                <dd id="NDialog.windowHandle" class="function">windowHandle</dd>
+                <dd id="NDialog.windowIcon" class="function">windowIcon</dd>
+                <dd id="NDialog.windowIconText" class="function">windowIconText</dd>
+                <dd id="NDialog.windowModality" class="function">windowModality</dd>
+                <dd id="NDialog.windowOpacity" class="function">windowOpacity</dd>
+                <dd id="NDialog.windowRole" class="function">windowRole</dd>
+                <dd id="NDialog.windowState" class="function">windowState</dd>
+                <dd id="NDialog.windowTitle" class="function">windowTitle</dd>
+                <dd id="NDialog.windowType" class="function">windowType</dd>
+                <dd id="NDialog.x" class="function">x</dd>
+                <dd id="NDialog.y" class="function">y</dd>
+                <dd id="NDialog.RenderFlag" class="class">RenderFlag</dd>
+                <dd id="NDialog.RenderFlags" class="class">RenderFlags</dd>
+                <dd id="NDialog.DrawWindowBackground" class="variable">DrawWindowBackground</dd>
+                <dd id="NDialog.DrawChildren" class="variable">DrawChildren</dd>
+                <dd id="NDialog.IgnoreMask" class="variable">IgnoreMask</dd>
+                <dd id="NDialog.windowTitleChanged" class="function">windowTitleChanged</dd>
+                <dd id="NDialog.windowIconTextChanged" class="function">windowIconTextChanged</dd>
+                <dd id="NDialog.windowIconChanged" class="function">windowIconChanged</dd>
+                <dd id="NDialog.customContextMenuRequested" class="function">customContextMenuRequested</dd>
+
+            </div>
+            <div><dt>nori.Nori</dt>
+                                <dd id="NDialog.DEFAULT_ICON" class="variable">DEFAULT_ICON</dd>
+                <dd id="NDialog.DEFAULT_TITLE" class="variable">DEFAULT_TITLE</dd>
+                <dd id="NDialog.PACKAGE_CONFIG" class="variable">PACKAGE_CONFIG</dd>
+                <dd id="NDialog.set_window_icon" class="function">set_window_icon</dd>
+                <dd id="NDialog.keyPressEvent" class="function">keyPressEvent</dd>
+                <dd id="NDialog.add_dock_panel" class="function">add_dock_panel</dd>
+                <dd id="NDialog.remove_dock_panel" class="function">remove_dock_panel</dd>
+                <dd id="NDialog.add_menu_bar" class="function">add_menu_bar</dd>
+                <dd id="NDialog.add_file_menu" class="function">add_file_menu</dd>
+                <dd id="NDialog.get_menus" class="function">get_menus</dd>
+                <dd id="NDialog.add_menu" class="function">add_menu</dd>
+                <dd id="NDialog.add_menu_actions" class="function">add_menu_actions</dd>
+                <dd id="NDialog.create_refresh_action" class="function">create_refresh_action</dd>
+                <dd id="NDialog.create_help_action" class="function">create_help_action</dd>
+                <dd id="NDialog.create_close_action" class="function">create_close_action</dd>
+                <dd id="NDialog.get_help" class="function">get_help</dd>
+                <dd id="NDialog.remove_menu" class="function">remove_menu</dd>
+                <dd id="NDialog.display_status_message" class="function">display_status_message</dd>
+                <dd id="NDialog.closeEvent" class="function">closeEvent</dd>
+                <dd id="NDialog.load_fonts" class="function">load_fonts</dd>
+
+            </div>
+            <div><dt>PySide6.QtCore.QObject</dt>
+                                <dd id="NDialog.parent" class="function">parent</dd>
+                <dd id="NDialog.blockSignals" class="function">blockSignals</dd>
+                <dd id="NDialog.childEvent" class="function">childEvent</dd>
+                <dd id="NDialog.children" class="function">children</dd>
+                <dd id="NDialog.connect" class="function">connect</dd>
+                <dd id="NDialog.connectNotify" class="function">connectNotify</dd>
+                <dd id="NDialog.customEvent" class="function">customEvent</dd>
+                <dd id="NDialog.deleteLater" class="function">deleteLater</dd>
+                <dd id="NDialog.disconnect" class="function">disconnect</dd>
+                <dd id="NDialog.disconnectNotify" class="function">disconnectNotify</dd>
+                <dd id="NDialog.dumpObjectInfo" class="function">dumpObjectInfo</dd>
+                <dd id="NDialog.dumpObjectTree" class="function">dumpObjectTree</dd>
+                <dd id="NDialog.dynamicPropertyNames" class="function">dynamicPropertyNames</dd>
+                <dd id="NDialog.emit" class="function">emit</dd>
+                <dd id="NDialog.eventFilter" class="function">eventFilter</dd>
+                <dd id="NDialog.findChild" class="function">findChild</dd>
+                <dd id="NDialog.findChildren" class="function">findChildren</dd>
+                <dd id="NDialog.inherits" class="function">inherits</dd>
+                <dd id="NDialog.installEventFilter" class="function">installEventFilter</dd>
+                <dd id="NDialog.isSignalConnected" class="function">isSignalConnected</dd>
+                <dd id="NDialog.isWidgetType" class="function">isWidgetType</dd>
+                <dd id="NDialog.isWindowType" class="function">isWindowType</dd>
+                <dd id="NDialog.killTimer" class="function">killTimer</dd>
+                <dd id="NDialog.metaObject" class="function">metaObject</dd>
+                <dd id="NDialog.moveToThread" class="function">moveToThread</dd>
+                <dd id="NDialog.objectName" class="function">objectName</dd>
+                <dd id="NDialog.property" class="function">property</dd>
+                <dd id="NDialog.receivers" class="function">receivers</dd>
+                <dd id="NDialog.removeEventFilter" class="function">removeEventFilter</dd>
+                <dd id="NDialog.sender" class="function">sender</dd>
+                <dd id="NDialog.senderSignalIndex" class="function">senderSignalIndex</dd>
+                <dd id="NDialog.setObjectName" class="function">setObjectName</dd>
+                <dd id="NDialog.setProperty" class="function">setProperty</dd>
+                <dd id="NDialog.signalsBlocked" class="function">signalsBlocked</dd>
+                <dd id="NDialog.startTimer" class="function">startTimer</dd>
+                <dd id="NDialog.thread" class="function">thread</dd>
+                <dd id="NDialog.timerEvent" class="function">timerEvent</dd>
+                <dd id="NDialog.tr" class="function">tr</dd>
+                <dd id="NDialog.objectNameChanged" class="function">objectNameChanged</dd>
+                <dd id="NDialog.destroyed" class="function">destroyed</dd>
+
+            </div>
+            <div><dt>PySide6.QtWidgets.QMainWindow</dt>
+                                <dd id="NDialog.addDockWidget" class="function">addDockWidget</dd>
+                <dd id="NDialog.addToolBar" class="function">addToolBar</dd>
+                <dd id="NDialog.addToolBarBreak" class="function">addToolBarBreak</dd>
+                <dd id="NDialog.centralWidget" class="function">centralWidget</dd>
+                <dd id="NDialog.contextMenuEvent" class="function">contextMenuEvent</dd>
+                <dd id="NDialog.corner" class="function">corner</dd>
+                <dd id="NDialog.createPopupMenu" class="function">createPopupMenu</dd>
+                <dd id="NDialog.dockOptions" class="function">dockOptions</dd>
+                <dd id="NDialog.dockWidgetArea" class="function">dockWidgetArea</dd>
+                <dd id="NDialog.documentMode" class="function">documentMode</dd>
+                <dd id="NDialog.event" class="function">event</dd>
+                <dd id="NDialog.iconSize" class="function">iconSize</dd>
+                <dd id="NDialog.insertToolBar" class="function">insertToolBar</dd>
+                <dd id="NDialog.insertToolBarBreak" class="function">insertToolBarBreak</dd>
+                <dd id="NDialog.isAnimated" class="function">isAnimated</dd>
+                <dd id="NDialog.isDockNestingEnabled" class="function">isDockNestingEnabled</dd>
+                <dd id="NDialog.isSeparator" class="function">isSeparator</dd>
+                <dd id="NDialog.menuBar" class="function">menuBar</dd>
+                <dd id="NDialog.menuWidget" class="function">menuWidget</dd>
+                <dd id="NDialog.removeDockWidget" class="function">removeDockWidget</dd>
+                <dd id="NDialog.removeToolBar" class="function">removeToolBar</dd>
+                <dd id="NDialog.removeToolBarBreak" class="function">removeToolBarBreak</dd>
+                <dd id="NDialog.resizeDocks" class="function">resizeDocks</dd>
+                <dd id="NDialog.restoreDockWidget" class="function">restoreDockWidget</dd>
+                <dd id="NDialog.restoreState" class="function">restoreState</dd>
+                <dd id="NDialog.saveState" class="function">saveState</dd>
+                <dd id="NDialog.setAnimated" class="function">setAnimated</dd>
+                <dd id="NDialog.setCentralWidget" class="function">setCentralWidget</dd>
+                <dd id="NDialog.setCorner" class="function">setCorner</dd>
+                <dd id="NDialog.setDockNestingEnabled" class="function">setDockNestingEnabled</dd>
+                <dd id="NDialog.setDockOptions" class="function">setDockOptions</dd>
+                <dd id="NDialog.setDocumentMode" class="function">setDocumentMode</dd>
+                <dd id="NDialog.setIconSize" class="function">setIconSize</dd>
+                <dd id="NDialog.setMenuBar" class="function">setMenuBar</dd>
+                <dd id="NDialog.setMenuWidget" class="function">setMenuWidget</dd>
+                <dd id="NDialog.setStatusBar" class="function">setStatusBar</dd>
+                <dd id="NDialog.setTabPosition" class="function">setTabPosition</dd>
+                <dd id="NDialog.setTabShape" class="function">setTabShape</dd>
+                <dd id="NDialog.setToolButtonStyle" class="function">setToolButtonStyle</dd>
+                <dd id="NDialog.setUnifiedTitleAndToolBarOnMac" class="function">setUnifiedTitleAndToolBarOnMac</dd>
+                <dd id="NDialog.splitDockWidget" class="function">splitDockWidget</dd>
+                <dd id="NDialog.statusBar" class="function">statusBar</dd>
+                <dd id="NDialog.tabPosition" class="function">tabPosition</dd>
+                <dd id="NDialog.tabShape" class="function">tabShape</dd>
+                <dd id="NDialog.tabifiedDockWidgets" class="function">tabifiedDockWidgets</dd>
+                <dd id="NDialog.tabifyDockWidget" class="function">tabifyDockWidget</dd>
+                <dd id="NDialog.takeCentralWidget" class="function">takeCentralWidget</dd>
+                <dd id="NDialog.toolBarArea" class="function">toolBarArea</dd>
+                <dd id="NDialog.toolBarBreak" class="function">toolBarBreak</dd>
+                <dd id="NDialog.toolButtonStyle" class="function">toolButtonStyle</dd>
+                <dd id="NDialog.unifiedTitleAndToolBarOnMac" class="function">unifiedTitleAndToolBarOnMac</dd>
+                <dd id="NDialog.DockOption" class="class">DockOption</dd>
+                <dd id="NDialog.DockOptions" class="class">DockOptions</dd>
+                <dd id="NDialog.AnimatedDocks" class="variable">AnimatedDocks</dd>
+                <dd id="NDialog.AllowNestedDocks" class="variable">AllowNestedDocks</dd>
+                <dd id="NDialog.AllowTabbedDocks" class="variable">AllowTabbedDocks</dd>
+                <dd id="NDialog.ForceTabbedDocks" class="variable">ForceTabbedDocks</dd>
+                <dd id="NDialog.VerticalTabs" class="variable">VerticalTabs</dd>
+                <dd id="NDialog.GroupedDragging" class="variable">GroupedDragging</dd>
+                <dd id="NDialog.iconSizeChanged" class="function">iconSizeChanged</dd>
+                <dd id="NDialog.tabifiedDockWidgetActivated" class="function">tabifiedDockWidgetActivated</dd>
+                <dd id="NDialog.toolButtonStyleChanged" class="function">toolButtonStyleChanged</dd>
+
+            </div>
+            <div><dt>PySide6.QtGui.QPaintDevice</dt>
+                                <dd id="NDialog.colorCount" class="function">colorCount</dd>
+                <dd id="NDialog.depth" class="function">depth</dd>
+                <dd id="NDialog.devicePixelRatio" class="function">devicePixelRatio</dd>
+                <dd id="NDialog.devicePixelRatioF" class="function">devicePixelRatioF</dd>
+                <dd id="NDialog.devicePixelRatioFScale" class="function">devicePixelRatioFScale</dd>
+                <dd id="NDialog.heightMM" class="function">heightMM</dd>
+                <dd id="NDialog.logicalDpiX" class="function">logicalDpiX</dd>
+                <dd id="NDialog.logicalDpiY" class="function">logicalDpiY</dd>
+                <dd id="NDialog.paintingActive" class="function">paintingActive</dd>
+                <dd id="NDialog.physicalDpiX" class="function">physicalDpiX</dd>
+                <dd id="NDialog.physicalDpiY" class="function">physicalDpiY</dd>
+                <dd id="NDialog.widthMM" class="function">widthMM</dd>
+                <dd id="NDialog.painters" class="variable">painters</dd>
+                <dd id="NDialog.PaintDeviceMetric" class="class">PaintDeviceMetric</dd>
+                <dd id="NDialog.PdmWidth" class="variable">PdmWidth</dd>
+                <dd id="NDialog.PdmHeight" class="variable">PdmHeight</dd>
+                <dd id="NDialog.PdmWidthMM" class="variable">PdmWidthMM</dd>
+                <dd id="NDialog.PdmHeightMM" class="variable">PdmHeightMM</dd>
+                <dd id="NDialog.PdmNumColors" class="variable">PdmNumColors</dd>
+                <dd id="NDialog.PdmDepth" class="variable">PdmDepth</dd>
+                <dd id="NDialog.PdmDpiX" class="variable">PdmDpiX</dd>
+                <dd id="NDialog.PdmDpiY" class="variable">PdmDpiY</dd>
+                <dd id="NDialog.PdmPhysicalDpiX" class="variable">PdmPhysicalDpiX</dd>
+                <dd id="NDialog.PdmPhysicalDpiY" class="variable">PdmPhysicalDpiY</dd>
+                <dd id="NDialog.PdmDevicePixelRatio" class="variable">PdmDevicePixelRatio</dd>
+                <dd id="NDialog.PdmDevicePixelRatioScaled" class="variable">PdmDevicePixelRatioScaled</dd>
+
+            </div>
+                                </dl>
+                            </div>
+                </section>
+                <section id="NErrorDialog">
+                                <div class="attr class">
+        <a class="headerlink" href="#NErrorDialog">#&nbsp;&nbsp</a>
+
+        
+        <span class="def">class</span>
+        <span class="name">NErrorDialog</span><wbr>(<span class="base"><a href="#NDialog">NDialog</a></span>):
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">NErrorDialog</span><span class="p">(</span><span class="n">NDialog</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Error dialog class.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parent</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">failure_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create an error dialog based on the MDialog class.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NErrorDialog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+            <span class="n">message_icon</span><span class="o">=</span><span class="s1">&#39;alert-octagon-outline.png&#39;</span><span class="p">,</span>
+            <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="ow">or</span> <span class="s1">&#39;Error&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="ow">or</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">failure_message</span> <span class="o">=</span> <span class="n">failure_message</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_error_widget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_dialog_widget</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_error_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create the error widget.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QTextEdit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span>
+            <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">failure_message</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>QMainWindow(self, parent: Optional[PySide6.QtWidgets.QWidget] = None, flags: PySide6.QtCore.Qt.WindowFlags = Default(Qt.WindowFlags)) -> None</p>
+</div>
+
+
+                            <div id="NErrorDialog.__init__" class="classattr">
+                                        <div class="attr function"><a class="headerlink" href="#NErrorDialog.__init__">#&nbsp;&nbsp</a>
+
+        
+            <span class="name">NErrorDialog</span><span class="signature">(
+    parent: Optional[PySide6.QtWidgets.QWidget] = None,
+    title: Optional[str] = None,
+    message: Optional[str] = None,
+    failure_message: Optional[str] = None
+)</span>
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">parent</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">failure_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create an error dialog based on the MDialog class.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NErrorDialog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+            <span class="n">message_icon</span><span class="o">=</span><span class="s1">&#39;alert-octagon-outline.png&#39;</span><span class="p">,</span>
+            <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="ow">or</span> <span class="s1">&#39;Error&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="ow">or</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">failure_message</span> <span class="o">=</span> <span class="n">failure_message</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_error_widget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_dialog_widget</span><span class="p">()</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>Create an error dialog based on the MDialog class.</p>
+</div>
+
+
+                            </div>
+                            <div id="NErrorDialog.create_error_widget" class="classattr">
+                                        <div class="attr function"><a class="headerlink" href="#NErrorDialog.create_error_widget">#&nbsp;&nbsp</a>
+
+        
+            <span class="def">def</span>
+            <span class="name">create_error_widget</span><span class="signature">(self) -&gt; None</span>:
+    </div>
+
+                <details>
+            <summary>View Source</summary>
+            <div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="nf">create_error_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create the error widget.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QTextEdit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setMinimumWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span>
+            <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">failure_message</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="o">.</span><span class="n">setReadOnly</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_box</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</pre></div>
+
+        </details>
+
+            <div class="docstring"><p>Create the error widget.</p>
+</div>
+
+
+                            </div>
+                            <div id="NErrorDialog.staticMetaObject" class="classattr">
+                                            <div class="attr variable"><a class="headerlink" href="#NErrorDialog.staticMetaObject">#&nbsp;&nbsp</a>
+
+        <span class="name">staticMetaObject</span><span class="default_value"> = PySide6.QtCore.QMetaObject(&#34;NErrorDialog&#34; inherits &#34;NDialog&#34;:
+)</span>
+    </div>
+
+    
+
+                            </div>
+                            <div class="inherited">
+                                <h5>Inherited Members</h5>
+                                <dl>
+                                    <div><dt><a href="#NDialog">NDialog</a></dt>
+                                <dd id="NErrorDialog.DEFAULT_MESSAGE_ICON" class="variable"><a href="#NDialog.DEFAULT_MESSAGE_ICON">DEFAULT_MESSAGE_ICON</a></dd>
+                <dd id="NErrorDialog.create_dialog" class="function"><a href="#NDialog.create_dialog">create_dialog</a></dd>
+                <dd id="NErrorDialog.add_dialog_widget" class="function"><a href="#NDialog.add_dialog_widget">add_dialog_widget</a></dd>
+                <dd id="NErrorDialog.add_ok_button" class="function"><a href="#NDialog.add_ok_button">add_ok_button</a></dd>
+                <dd id="NErrorDialog.ok_button_clicked" class="function"><a href="#NDialog.ok_button_clicked">ok_button_clicked</a></dd>
+
+            </div>
+            <div><dt>PySide6.QtWidgets.QWidget</dt>
+                                <dd id="NErrorDialog.style" class="function">style</dd>
+                <dd id="NErrorDialog.palette" class="function">palette</dd>
+                <dd id="NErrorDialog.acceptDrops" class="function">acceptDrops</dd>
+                <dd id="NErrorDialog.accessibleDescription" class="function">accessibleDescription</dd>
+                <dd id="NErrorDialog.accessibleName" class="function">accessibleName</dd>
+                <dd id="NErrorDialog.actionEvent" class="function">actionEvent</dd>
+                <dd id="NErrorDialog.actions" class="function">actions</dd>
+                <dd id="NErrorDialog.activateWindow" class="function">activateWindow</dd>
+                <dd id="NErrorDialog.addAction" class="function">addAction</dd>
+                <dd id="NErrorDialog.addActions" class="function">addActions</dd>
+                <dd id="NErrorDialog.adjustSize" class="function">adjustSize</dd>
+                <dd id="NErrorDialog.autoFillBackground" class="function">autoFillBackground</dd>
+                <dd id="NErrorDialog.backgroundRole" class="function">backgroundRole</dd>
+                <dd id="NErrorDialog.backingStore" class="function">backingStore</dd>
+                <dd id="NErrorDialog.baseSize" class="function">baseSize</dd>
+                <dd id="NErrorDialog.changeEvent" class="function">changeEvent</dd>
+                <dd id="NErrorDialog.childAt" class="function">childAt</dd>
+                <dd id="NErrorDialog.childrenRect" class="function">childrenRect</dd>
+                <dd id="NErrorDialog.childrenRegion" class="function">childrenRegion</dd>
+                <dd id="NErrorDialog.clearFocus" class="function">clearFocus</dd>
+                <dd id="NErrorDialog.clearMask" class="function">clearMask</dd>
+                <dd id="NErrorDialog.close" class="function">close</dd>
+                <dd id="NErrorDialog.contentsMargins" class="function">contentsMargins</dd>
+                <dd id="NErrorDialog.contentsRect" class="function">contentsRect</dd>
+                <dd id="NErrorDialog.contextMenuPolicy" class="function">contextMenuPolicy</dd>
+                <dd id="NErrorDialog.create" class="function">create</dd>
+                <dd id="NErrorDialog.createWinId" class="function">createWinId</dd>
+                <dd id="NErrorDialog.createWindowContainer" class="function">createWindowContainer</dd>
+                <dd id="NErrorDialog.cursor" class="function">cursor</dd>
+                <dd id="NErrorDialog.destroy" class="function">destroy</dd>
+                <dd id="NErrorDialog.devType" class="function">devType</dd>
+                <dd id="NErrorDialog.dragEnterEvent" class="function">dragEnterEvent</dd>
+                <dd id="NErrorDialog.dragLeaveEvent" class="function">dragLeaveEvent</dd>
+                <dd id="NErrorDialog.dragMoveEvent" class="function">dragMoveEvent</dd>
+                <dd id="NErrorDialog.dropEvent" class="function">dropEvent</dd>
+                <dd id="NErrorDialog.effectiveWinId" class="function">effectiveWinId</dd>
+                <dd id="NErrorDialog.ensurePolished" class="function">ensurePolished</dd>
+                <dd id="NErrorDialog.enterEvent" class="function">enterEvent</dd>
+                <dd id="NErrorDialog.find" class="function">find</dd>
+                <dd id="NErrorDialog.focusInEvent" class="function">focusInEvent</dd>
+                <dd id="NErrorDialog.focusNextChild" class="function">focusNextChild</dd>
+                <dd id="NErrorDialog.focusNextPrevChild" class="function">focusNextPrevChild</dd>
+                <dd id="NErrorDialog.focusOutEvent" class="function">focusOutEvent</dd>
+                <dd id="NErrorDialog.focusPolicy" class="function">focusPolicy</dd>
+                <dd id="NErrorDialog.focusPreviousChild" class="function">focusPreviousChild</dd>
+                <dd id="NErrorDialog.focusProxy" class="function">focusProxy</dd>
+                <dd id="NErrorDialog.focusWidget" class="function">focusWidget</dd>
+                <dd id="NErrorDialog.font" class="function">font</dd>
+                <dd id="NErrorDialog.fontInfo" class="function">fontInfo</dd>
+                <dd id="NErrorDialog.fontMetrics" class="function">fontMetrics</dd>
+                <dd id="NErrorDialog.foregroundRole" class="function">foregroundRole</dd>
+                <dd id="NErrorDialog.frameGeometry" class="function">frameGeometry</dd>
+                <dd id="NErrorDialog.frameSize" class="function">frameSize</dd>
+                <dd id="NErrorDialog.geometry" class="function">geometry</dd>
+                <dd id="NErrorDialog.grab" class="function">grab</dd>
+                <dd id="NErrorDialog.grabGesture" class="function">grabGesture</dd>
+                <dd id="NErrorDialog.grabKeyboard" class="function">grabKeyboard</dd>
+                <dd id="NErrorDialog.grabMouse" class="function">grabMouse</dd>
+                <dd id="NErrorDialog.grabShortcut" class="function">grabShortcut</dd>
+                <dd id="NErrorDialog.graphicsEffect" class="function">graphicsEffect</dd>
+                <dd id="NErrorDialog.graphicsProxyWidget" class="function">graphicsProxyWidget</dd>
+                <dd id="NErrorDialog.hasFocus" class="function">hasFocus</dd>
+                <dd id="NErrorDialog.hasHeightForWidth" class="function">hasHeightForWidth</dd>
+                <dd id="NErrorDialog.hasMouseTracking" class="function">hasMouseTracking</dd>
+                <dd id="NErrorDialog.hasTabletTracking" class="function">hasTabletTracking</dd>
+                <dd id="NErrorDialog.height" class="function">height</dd>
+                <dd id="NErrorDialog.heightForWidth" class="function">heightForWidth</dd>
+                <dd id="NErrorDialog.hide" class="function">hide</dd>
+                <dd id="NErrorDialog.hideEvent" class="function">hideEvent</dd>
+                <dd id="NErrorDialog.initPainter" class="function">initPainter</dd>
+                <dd id="NErrorDialog.inputMethodEvent" class="function">inputMethodEvent</dd>
+                <dd id="NErrorDialog.inputMethodHints" class="function">inputMethodHints</dd>
+                <dd id="NErrorDialog.inputMethodQuery" class="function">inputMethodQuery</dd>
+                <dd id="NErrorDialog.insertAction" class="function">insertAction</dd>
+                <dd id="NErrorDialog.insertActions" class="function">insertActions</dd>
+                <dd id="NErrorDialog.internalWinId" class="function">internalWinId</dd>
+                <dd id="NErrorDialog.isActiveWindow" class="function">isActiveWindow</dd>
+                <dd id="NErrorDialog.isAncestorOf" class="function">isAncestorOf</dd>
+                <dd id="NErrorDialog.isEnabled" class="function">isEnabled</dd>
+                <dd id="NErrorDialog.isEnabledTo" class="function">isEnabledTo</dd>
+                <dd id="NErrorDialog.isFullScreen" class="function">isFullScreen</dd>
+                <dd id="NErrorDialog.isHidden" class="function">isHidden</dd>
+                <dd id="NErrorDialog.isLeftToRight" class="function">isLeftToRight</dd>
+                <dd id="NErrorDialog.isMaximized" class="function">isMaximized</dd>
+                <dd id="NErrorDialog.isMinimized" class="function">isMinimized</dd>
+                <dd id="NErrorDialog.isModal" class="function">isModal</dd>
+                <dd id="NErrorDialog.isRightToLeft" class="function">isRightToLeft</dd>
+                <dd id="NErrorDialog.isTopLevel" class="function">isTopLevel</dd>
+                <dd id="NErrorDialog.isVisible" class="function">isVisible</dd>
+                <dd id="NErrorDialog.isVisibleTo" class="function">isVisibleTo</dd>
+                <dd id="NErrorDialog.isWindow" class="function">isWindow</dd>
+                <dd id="NErrorDialog.isWindowModified" class="function">isWindowModified</dd>
+                <dd id="NErrorDialog.keyReleaseEvent" class="function">keyReleaseEvent</dd>
+                <dd id="NErrorDialog.keyboardGrabber" class="function">keyboardGrabber</dd>
+                <dd id="NErrorDialog.layout" class="function">layout</dd>
+                <dd id="NErrorDialog.layoutDirection" class="function">layoutDirection</dd>
+                <dd id="NErrorDialog.leaveEvent" class="function">leaveEvent</dd>
+                <dd id="NErrorDialog.locale" class="function">locale</dd>
+                <dd id="NErrorDialog.lower" class="function">lower</dd>
+                <dd id="NErrorDialog.mapFrom" class="function">mapFrom</dd>
+                <dd id="NErrorDialog.mapFromGlobal" class="function">mapFromGlobal</dd>
+                <dd id="NErrorDialog.mapFromParent" class="function">mapFromParent</dd>
+                <dd id="NErrorDialog.mapTo" class="function">mapTo</dd>
+                <dd id="NErrorDialog.mapToGlobal" class="function">mapToGlobal</dd>
+                <dd id="NErrorDialog.mapToParent" class="function">mapToParent</dd>
+                <dd id="NErrorDialog.mask" class="function">mask</dd>
+                <dd id="NErrorDialog.maximumHeight" class="function">maximumHeight</dd>
+                <dd id="NErrorDialog.maximumSize" class="function">maximumSize</dd>
+                <dd id="NErrorDialog.maximumWidth" class="function">maximumWidth</dd>
+                <dd id="NErrorDialog.metric" class="function">metric</dd>
+                <dd id="NErrorDialog.minimumHeight" class="function">minimumHeight</dd>
+                <dd id="NErrorDialog.minimumSize" class="function">minimumSize</dd>
+                <dd id="NErrorDialog.minimumSizeHint" class="function">minimumSizeHint</dd>
+                <dd id="NErrorDialog.minimumWidth" class="function">minimumWidth</dd>
+                <dd id="NErrorDialog.mouseDoubleClickEvent" class="function">mouseDoubleClickEvent</dd>
+                <dd id="NErrorDialog.mouseGrabber" class="function">mouseGrabber</dd>
+                <dd id="NErrorDialog.mouseMoveEvent" class="function">mouseMoveEvent</dd>
+                <dd id="NErrorDialog.mousePressEvent" class="function">mousePressEvent</dd>
+                <dd id="NErrorDialog.mouseReleaseEvent" class="function">mouseReleaseEvent</dd>
+                <dd id="NErrorDialog.move" class="function">move</dd>
+                <dd id="NErrorDialog.moveEvent" class="function">moveEvent</dd>
+                <dd id="NErrorDialog.nativeEvent" class="function">nativeEvent</dd>
+                <dd id="NErrorDialog.nativeParentWidget" class="function">nativeParentWidget</dd>
+                <dd id="NErrorDialog.nextInFocusChain" class="function">nextInFocusChain</dd>
+                <dd id="NErrorDialog.normalGeometry" class="function">normalGeometry</dd>
+                <dd id="NErrorDialog.overrideWindowFlags" class="function">overrideWindowFlags</dd>
+                <dd id="NErrorDialog.overrideWindowState" class="function">overrideWindowState</dd>
+                <dd id="NErrorDialog.paintEngine" class="function">paintEngine</dd>
+                <dd id="NErrorDialog.paintEvent" class="function">paintEvent</dd>
+                <dd id="NErrorDialog.parentWidget" class="function">parentWidget</dd>
+                <dd id="NErrorDialog.pos" class="function">pos</dd>
+                <dd id="NErrorDialog.previousInFocusChain" class="function">previousInFocusChain</dd>
+                <dd id="NErrorDialog.raise_" class="function">raise_</dd>
+                <dd id="NErrorDialog.rect" class="function">rect</dd>
+                <dd id="NErrorDialog.redirected" class="function">redirected</dd>
+                <dd id="NErrorDialog.releaseKeyboard" class="function">releaseKeyboard</dd>
+                <dd id="NErrorDialog.releaseMouse" class="function">releaseMouse</dd>
+                <dd id="NErrorDialog.releaseShortcut" class="function">releaseShortcut</dd>
+                <dd id="NErrorDialog.removeAction" class="function">removeAction</dd>
+                <dd id="NErrorDialog.render" class="function">render</dd>
+                <dd id="NErrorDialog.repaint" class="function">repaint</dd>
+                <dd id="NErrorDialog.resize" class="function">resize</dd>
+                <dd id="NErrorDialog.resizeEvent" class="function">resizeEvent</dd>
+                <dd id="NErrorDialog.restoreGeometry" class="function">restoreGeometry</dd>
+                <dd id="NErrorDialog.saveGeometry" class="function">saveGeometry</dd>
+                <dd id="NErrorDialog.screen" class="function">screen</dd>
+                <dd id="NErrorDialog.scroll" class="function">scroll</dd>
+                <dd id="NErrorDialog.setAcceptDrops" class="function">setAcceptDrops</dd>
+                <dd id="NErrorDialog.setAccessibleDescription" class="function">setAccessibleDescription</dd>
+                <dd id="NErrorDialog.setAccessibleName" class="function">setAccessibleName</dd>
+                <dd id="NErrorDialog.setAttribute" class="function">setAttribute</dd>
+                <dd id="NErrorDialog.setAutoFillBackground" class="function">setAutoFillBackground</dd>
+                <dd id="NErrorDialog.setBackgroundRole" class="function">setBackgroundRole</dd>
+                <dd id="NErrorDialog.setBaseSize" class="function">setBaseSize</dd>
+                <dd id="NErrorDialog.setContentsMargins" class="function">setContentsMargins</dd>
+                <dd id="NErrorDialog.setContextMenuPolicy" class="function">setContextMenuPolicy</dd>
+                <dd id="NErrorDialog.setCursor" class="function">setCursor</dd>
+                <dd id="NErrorDialog.setDisabled" class="function">setDisabled</dd>
+                <dd id="NErrorDialog.setEnabled" class="function">setEnabled</dd>
+                <dd id="NErrorDialog.setFixedHeight" class="function">setFixedHeight</dd>
+                <dd id="NErrorDialog.setFixedSize" class="function">setFixedSize</dd>
+                <dd id="NErrorDialog.setFixedWidth" class="function">setFixedWidth</dd>
+                <dd id="NErrorDialog.setFocus" class="function">setFocus</dd>
+                <dd id="NErrorDialog.setFocusPolicy" class="function">setFocusPolicy</dd>
+                <dd id="NErrorDialog.setFocusProxy" class="function">setFocusProxy</dd>
+                <dd id="NErrorDialog.setFont" class="function">setFont</dd>
+                <dd id="NErrorDialog.setForegroundRole" class="function">setForegroundRole</dd>
+                <dd id="NErrorDialog.setGeometry" class="function">setGeometry</dd>
+                <dd id="NErrorDialog.setGraphicsEffect" class="function">setGraphicsEffect</dd>
+                <dd id="NErrorDialog.setHidden" class="function">setHidden</dd>
+                <dd id="NErrorDialog.setInputMethodHints" class="function">setInputMethodHints</dd>
+                <dd id="NErrorDialog.setLayout" class="function">setLayout</dd>
+                <dd id="NErrorDialog.setLayoutDirection" class="function">setLayoutDirection</dd>
+                <dd id="NErrorDialog.setLocale" class="function">setLocale</dd>
+                <dd id="NErrorDialog.setMask" class="function">setMask</dd>
+                <dd id="NErrorDialog.setMaximumHeight" class="function">setMaximumHeight</dd>
+                <dd id="NErrorDialog.setMaximumSize" class="function">setMaximumSize</dd>
+                <dd id="NErrorDialog.setMaximumWidth" class="function">setMaximumWidth</dd>
+                <dd id="NErrorDialog.setMinimumHeight" class="function">setMinimumHeight</dd>
+                <dd id="NErrorDialog.setMinimumSize" class="function">setMinimumSize</dd>
+                <dd id="NErrorDialog.setMinimumWidth" class="function">setMinimumWidth</dd>
+                <dd id="NErrorDialog.setMouseTracking" class="function">setMouseTracking</dd>
+                <dd id="NErrorDialog.setPalette" class="function">setPalette</dd>
+                <dd id="NErrorDialog.setParent" class="function">setParent</dd>
+                <dd id="NErrorDialog.setScreen" class="function">setScreen</dd>
+                <dd id="NErrorDialog.setShortcutAutoRepeat" class="function">setShortcutAutoRepeat</dd>
+                <dd id="NErrorDialog.setShortcutEnabled" class="function">setShortcutEnabled</dd>
+                <dd id="NErrorDialog.setSizeIncrement" class="function">setSizeIncrement</dd>
+                <dd id="NErrorDialog.setSizePolicy" class="function">setSizePolicy</dd>
+                <dd id="NErrorDialog.setStatusTip" class="function">setStatusTip</dd>
+                <dd id="NErrorDialog.setStyle" class="function">setStyle</dd>
+                <dd id="NErrorDialog.setStyleSheet" class="function">setStyleSheet</dd>
+                <dd id="NErrorDialog.setTabOrder" class="function">setTabOrder</dd>
+                <dd id="NErrorDialog.setTabletTracking" class="function">setTabletTracking</dd>
+                <dd id="NErrorDialog.setToolTip" class="function">setToolTip</dd>
+                <dd id="NErrorDialog.setToolTipDuration" class="function">setToolTipDuration</dd>
+                <dd id="NErrorDialog.setUpdatesEnabled" class="function">setUpdatesEnabled</dd>
+                <dd id="NErrorDialog.setVisible" class="function">setVisible</dd>
+                <dd id="NErrorDialog.setWhatsThis" class="function">setWhatsThis</dd>
+                <dd id="NErrorDialog.setWindowFilePath" class="function">setWindowFilePath</dd>
+                <dd id="NErrorDialog.setWindowFlag" class="function">setWindowFlag</dd>
+                <dd id="NErrorDialog.setWindowFlags" class="function">setWindowFlags</dd>
+                <dd id="NErrorDialog.setWindowIcon" class="function">setWindowIcon</dd>
+                <dd id="NErrorDialog.setWindowIconText" class="function">setWindowIconText</dd>
+                <dd id="NErrorDialog.setWindowModality" class="function">setWindowModality</dd>
+                <dd id="NErrorDialog.setWindowModified" class="function">setWindowModified</dd>
+                <dd id="NErrorDialog.setWindowOpacity" class="function">setWindowOpacity</dd>
+                <dd id="NErrorDialog.setWindowRole" class="function">setWindowRole</dd>
+                <dd id="NErrorDialog.setWindowState" class="function">setWindowState</dd>
+                <dd id="NErrorDialog.setWindowTitle" class="function">setWindowTitle</dd>
+                <dd id="NErrorDialog.sharedPainter" class="function">sharedPainter</dd>
+                <dd id="NErrorDialog.show" class="function">show</dd>
+                <dd id="NErrorDialog.showEvent" class="function">showEvent</dd>
+                <dd id="NErrorDialog.showFullScreen" class="function">showFullScreen</dd>
+                <dd id="NErrorDialog.showMaximized" class="function">showMaximized</dd>
+                <dd id="NErrorDialog.showMinimized" class="function">showMinimized</dd>
+                <dd id="NErrorDialog.showNormal" class="function">showNormal</dd>
+                <dd id="NErrorDialog.size" class="function">size</dd>
+                <dd id="NErrorDialog.sizeHint" class="function">sizeHint</dd>
+                <dd id="NErrorDialog.sizeIncrement" class="function">sizeIncrement</dd>
+                <dd id="NErrorDialog.sizePolicy" class="function">sizePolicy</dd>
+                <dd id="NErrorDialog.stackUnder" class="function">stackUnder</dd>
+                <dd id="NErrorDialog.statusTip" class="function">statusTip</dd>
+                <dd id="NErrorDialog.styleSheet" class="function">styleSheet</dd>
+                <dd id="NErrorDialog.tabletEvent" class="function">tabletEvent</dd>
+                <dd id="NErrorDialog.testAttribute" class="function">testAttribute</dd>
+                <dd id="NErrorDialog.toolTip" class="function">toolTip</dd>
+                <dd id="NErrorDialog.toolTipDuration" class="function">toolTipDuration</dd>
+                <dd id="NErrorDialog.topLevelWidget" class="function">topLevelWidget</dd>
+                <dd id="NErrorDialog.underMouse" class="function">underMouse</dd>
+                <dd id="NErrorDialog.ungrabGesture" class="function">ungrabGesture</dd>
+                <dd id="NErrorDialog.unsetCursor" class="function">unsetCursor</dd>
+                <dd id="NErrorDialog.unsetLayoutDirection" class="function">unsetLayoutDirection</dd>
+                <dd id="NErrorDialog.unsetLocale" class="function">unsetLocale</dd>
+                <dd id="NErrorDialog.update" class="function">update</dd>
+                <dd id="NErrorDialog.updateGeometry" class="function">updateGeometry</dd>
+                <dd id="NErrorDialog.updateMicroFocus" class="function">updateMicroFocus</dd>
+                <dd id="NErrorDialog.updatesEnabled" class="function">updatesEnabled</dd>
+                <dd id="NErrorDialog.visibleRegion" class="function">visibleRegion</dd>
+                <dd id="NErrorDialog.whatsThis" class="function">whatsThis</dd>
+                <dd id="NErrorDialog.wheelEvent" class="function">wheelEvent</dd>
+                <dd id="NErrorDialog.width" class="function">width</dd>
+                <dd id="NErrorDialog.winId" class="function">winId</dd>
+                <dd id="NErrorDialog.window" class="function">window</dd>
+                <dd id="NErrorDialog.windowFilePath" class="function">windowFilePath</dd>
+                <dd id="NErrorDialog.windowFlags" class="function">windowFlags</dd>
+                <dd id="NErrorDialog.windowHandle" class="function">windowHandle</dd>
+                <dd id="NErrorDialog.windowIcon" class="function">windowIcon</dd>
+                <dd id="NErrorDialog.windowIconText" class="function">windowIconText</dd>
+                <dd id="NErrorDialog.windowModality" class="function">windowModality</dd>
+                <dd id="NErrorDialog.windowOpacity" class="function">windowOpacity</dd>
+                <dd id="NErrorDialog.windowRole" class="function">windowRole</dd>
+                <dd id="NErrorDialog.windowState" class="function">windowState</dd>
+                <dd id="NErrorDialog.windowTitle" class="function">windowTitle</dd>
+                <dd id="NErrorDialog.windowType" class="function">windowType</dd>
+                <dd id="NErrorDialog.x" class="function">x</dd>
+                <dd id="NErrorDialog.y" class="function">y</dd>
+                <dd id="NErrorDialog.RenderFlag" class="class">RenderFlag</dd>
+                <dd id="NErrorDialog.RenderFlags" class="class">RenderFlags</dd>
+                <dd id="NErrorDialog.DrawWindowBackground" class="variable">DrawWindowBackground</dd>
+                <dd id="NErrorDialog.DrawChildren" class="variable">DrawChildren</dd>
+                <dd id="NErrorDialog.IgnoreMask" class="variable">IgnoreMask</dd>
+                <dd id="NErrorDialog.windowTitleChanged" class="function">windowTitleChanged</dd>
+                <dd id="NErrorDialog.windowIconTextChanged" class="function">windowIconTextChanged</dd>
+                <dd id="NErrorDialog.windowIconChanged" class="function">windowIconChanged</dd>
+                <dd id="NErrorDialog.customContextMenuRequested" class="function">customContextMenuRequested</dd>
+
+            </div>
+            <div><dt>nori.Nori</dt>
+                                <dd id="NErrorDialog.DEFAULT_ICON" class="variable">DEFAULT_ICON</dd>
+                <dd id="NErrorDialog.DEFAULT_TITLE" class="variable">DEFAULT_TITLE</dd>
+                <dd id="NErrorDialog.PACKAGE_CONFIG" class="variable">PACKAGE_CONFIG</dd>
+                <dd id="NErrorDialog.set_window_icon" class="function">set_window_icon</dd>
+                <dd id="NErrorDialog.keyPressEvent" class="function">keyPressEvent</dd>
+                <dd id="NErrorDialog.add_dock_panel" class="function">add_dock_panel</dd>
+                <dd id="NErrorDialog.remove_dock_panel" class="function">remove_dock_panel</dd>
+                <dd id="NErrorDialog.add_menu_bar" class="function">add_menu_bar</dd>
+                <dd id="NErrorDialog.add_file_menu" class="function">add_file_menu</dd>
+                <dd id="NErrorDialog.get_menus" class="function">get_menus</dd>
+                <dd id="NErrorDialog.add_menu" class="function">add_menu</dd>
+                <dd id="NErrorDialog.add_menu_actions" class="function">add_menu_actions</dd>
+                <dd id="NErrorDialog.create_refresh_action" class="function">create_refresh_action</dd>
+                <dd id="NErrorDialog.create_help_action" class="function">create_help_action</dd>
+                <dd id="NErrorDialog.create_close_action" class="function">create_close_action</dd>
+                <dd id="NErrorDialog.get_help" class="function">get_help</dd>
+                <dd id="NErrorDialog.remove_menu" class="function">remove_menu</dd>
+                <dd id="NErrorDialog.display_status_message" class="function">display_status_message</dd>
+                <dd id="NErrorDialog.closeEvent" class="function">closeEvent</dd>
+                <dd id="NErrorDialog.load_fonts" class="function">load_fonts</dd>
+
+            </div>
+            <div><dt>PySide6.QtCore.QObject</dt>
+                                <dd id="NErrorDialog.parent" class="function">parent</dd>
+                <dd id="NErrorDialog.blockSignals" class="function">blockSignals</dd>
+                <dd id="NErrorDialog.childEvent" class="function">childEvent</dd>
+                <dd id="NErrorDialog.children" class="function">children</dd>
+                <dd id="NErrorDialog.connect" class="function">connect</dd>
+                <dd id="NErrorDialog.connectNotify" class="function">connectNotify</dd>
+                <dd id="NErrorDialog.customEvent" class="function">customEvent</dd>
+                <dd id="NErrorDialog.deleteLater" class="function">deleteLater</dd>
+                <dd id="NErrorDialog.disconnect" class="function">disconnect</dd>
+                <dd id="NErrorDialog.disconnectNotify" class="function">disconnectNotify</dd>
+                <dd id="NErrorDialog.dumpObjectInfo" class="function">dumpObjectInfo</dd>
+                <dd id="NErrorDialog.dumpObjectTree" class="function">dumpObjectTree</dd>
+                <dd id="NErrorDialog.dynamicPropertyNames" class="function">dynamicPropertyNames</dd>
+                <dd id="NErrorDialog.emit" class="function">emit</dd>
+                <dd id="NErrorDialog.eventFilter" class="function">eventFilter</dd>
+                <dd id="NErrorDialog.findChild" class="function">findChild</dd>
+                <dd id="NErrorDialog.findChildren" class="function">findChildren</dd>
+                <dd id="NErrorDialog.inherits" class="function">inherits</dd>
+                <dd id="NErrorDialog.installEventFilter" class="function">installEventFilter</dd>
+                <dd id="NErrorDialog.isSignalConnected" class="function">isSignalConnected</dd>
+                <dd id="NErrorDialog.isWidgetType" class="function">isWidgetType</dd>
+                <dd id="NErrorDialog.isWindowType" class="function">isWindowType</dd>
+                <dd id="NErrorDialog.killTimer" class="function">killTimer</dd>
+                <dd id="NErrorDialog.metaObject" class="function">metaObject</dd>
+                <dd id="NErrorDialog.moveToThread" class="function">moveToThread</dd>
+                <dd id="NErrorDialog.objectName" class="function">objectName</dd>
+                <dd id="NErrorDialog.property" class="function">property</dd>
+                <dd id="NErrorDialog.receivers" class="function">receivers</dd>
+                <dd id="NErrorDialog.removeEventFilter" class="function">removeEventFilter</dd>
+                <dd id="NErrorDialog.sender" class="function">sender</dd>
+                <dd id="NErrorDialog.senderSignalIndex" class="function">senderSignalIndex</dd>
+                <dd id="NErrorDialog.setObjectName" class="function">setObjectName</dd>
+                <dd id="NErrorDialog.setProperty" class="function">setProperty</dd>
+                <dd id="NErrorDialog.signalsBlocked" class="function">signalsBlocked</dd>
+                <dd id="NErrorDialog.startTimer" class="function">startTimer</dd>
+                <dd id="NErrorDialog.thread" class="function">thread</dd>
+                <dd id="NErrorDialog.timerEvent" class="function">timerEvent</dd>
+                <dd id="NErrorDialog.tr" class="function">tr</dd>
+                <dd id="NErrorDialog.objectNameChanged" class="function">objectNameChanged</dd>
+                <dd id="NErrorDialog.destroyed" class="function">destroyed</dd>
+
+            </div>
+            <div><dt>PySide6.QtWidgets.QMainWindow</dt>
+                                <dd id="NErrorDialog.addDockWidget" class="function">addDockWidget</dd>
+                <dd id="NErrorDialog.addToolBar" class="function">addToolBar</dd>
+                <dd id="NErrorDialog.addToolBarBreak" class="function">addToolBarBreak</dd>
+                <dd id="NErrorDialog.centralWidget" class="function">centralWidget</dd>
+                <dd id="NErrorDialog.contextMenuEvent" class="function">contextMenuEvent</dd>
+                <dd id="NErrorDialog.corner" class="function">corner</dd>
+                <dd id="NErrorDialog.createPopupMenu" class="function">createPopupMenu</dd>
+                <dd id="NErrorDialog.dockOptions" class="function">dockOptions</dd>
+                <dd id="NErrorDialog.dockWidgetArea" class="function">dockWidgetArea</dd>
+                <dd id="NErrorDialog.documentMode" class="function">documentMode</dd>
+                <dd id="NErrorDialog.event" class="function">event</dd>
+                <dd id="NErrorDialog.iconSize" class="function">iconSize</dd>
+                <dd id="NErrorDialog.insertToolBar" class="function">insertToolBar</dd>
+                <dd id="NErrorDialog.insertToolBarBreak" class="function">insertToolBarBreak</dd>
+                <dd id="NErrorDialog.isAnimated" class="function">isAnimated</dd>
+                <dd id="NErrorDialog.isDockNestingEnabled" class="function">isDockNestingEnabled</dd>
+                <dd id="NErrorDialog.isSeparator" class="function">isSeparator</dd>
+                <dd id="NErrorDialog.menuBar" class="function">menuBar</dd>
+                <dd id="NErrorDialog.menuWidget" class="function">menuWidget</dd>
+                <dd id="NErrorDialog.removeDockWidget" class="function">removeDockWidget</dd>
+                <dd id="NErrorDialog.removeToolBar" class="function">removeToolBar</dd>
+                <dd id="NErrorDialog.removeToolBarBreak" class="function">removeToolBarBreak</dd>
+                <dd id="NErrorDialog.resizeDocks" class="function">resizeDocks</dd>
+                <dd id="NErrorDialog.restoreDockWidget" class="function">restoreDockWidget</dd>
+                <dd id="NErrorDialog.restoreState" class="function">restoreState</dd>
+                <dd id="NErrorDialog.saveState" class="function">saveState</dd>
+                <dd id="NErrorDialog.setAnimated" class="function">setAnimated</dd>
+                <dd id="NErrorDialog.setCentralWidget" class="function">setCentralWidget</dd>
+                <dd id="NErrorDialog.setCorner" class="function">setCorner</dd>
+                <dd id="NErrorDialog.setDockNestingEnabled" class="function">setDockNestingEnabled</dd>
+                <dd id="NErrorDialog.setDockOptions" class="function">setDockOptions</dd>
+                <dd id="NErrorDialog.setDocumentMode" class="function">setDocumentMode</dd>
+                <dd id="NErrorDialog.setIconSize" class="function">setIconSize</dd>
+                <dd id="NErrorDialog.setMenuBar" class="function">setMenuBar</dd>
+                <dd id="NErrorDialog.setMenuWidget" class="function">setMenuWidget</dd>
+                <dd id="NErrorDialog.setStatusBar" class="function">setStatusBar</dd>
+                <dd id="NErrorDialog.setTabPosition" class="function">setTabPosition</dd>
+                <dd id="NErrorDialog.setTabShape" class="function">setTabShape</dd>
+                <dd id="NErrorDialog.setToolButtonStyle" class="function">setToolButtonStyle</dd>
+                <dd id="NErrorDialog.setUnifiedTitleAndToolBarOnMac" class="function">setUnifiedTitleAndToolBarOnMac</dd>
+                <dd id="NErrorDialog.splitDockWidget" class="function">splitDockWidget</dd>
+                <dd id="NErrorDialog.statusBar" class="function">statusBar</dd>
+                <dd id="NErrorDialog.tabPosition" class="function">tabPosition</dd>
+                <dd id="NErrorDialog.tabShape" class="function">tabShape</dd>
+                <dd id="NErrorDialog.tabifiedDockWidgets" class="function">tabifiedDockWidgets</dd>
+                <dd id="NErrorDialog.tabifyDockWidget" class="function">tabifyDockWidget</dd>
+                <dd id="NErrorDialog.takeCentralWidget" class="function">takeCentralWidget</dd>
+                <dd id="NErrorDialog.toolBarArea" class="function">toolBarArea</dd>
+                <dd id="NErrorDialog.toolBarBreak" class="function">toolBarBreak</dd>
+                <dd id="NErrorDialog.toolButtonStyle" class="function">toolButtonStyle</dd>
+                <dd id="NErrorDialog.unifiedTitleAndToolBarOnMac" class="function">unifiedTitleAndToolBarOnMac</dd>
+                <dd id="NErrorDialog.DockOption" class="class">DockOption</dd>
+                <dd id="NErrorDialog.DockOptions" class="class">DockOptions</dd>
+                <dd id="NErrorDialog.AnimatedDocks" class="variable">AnimatedDocks</dd>
+                <dd id="NErrorDialog.AllowNestedDocks" class="variable">AllowNestedDocks</dd>
+                <dd id="NErrorDialog.AllowTabbedDocks" class="variable">AllowTabbedDocks</dd>
+                <dd id="NErrorDialog.ForceTabbedDocks" class="variable">ForceTabbedDocks</dd>
+                <dd id="NErrorDialog.VerticalTabs" class="variable">VerticalTabs</dd>
+                <dd id="NErrorDialog.GroupedDragging" class="variable">GroupedDragging</dd>
+                <dd id="NErrorDialog.iconSizeChanged" class="function">iconSizeChanged</dd>
+                <dd id="NErrorDialog.tabifiedDockWidgetActivated" class="function">tabifiedDockWidgetActivated</dd>
+                <dd id="NErrorDialog.toolButtonStyleChanged" class="function">toolButtonStyleChanged</dd>
+
+            </div>
+            <div><dt>PySide6.QtGui.QPaintDevice</dt>
+                                <dd id="NErrorDialog.colorCount" class="function">colorCount</dd>
+                <dd id="NErrorDialog.depth" class="function">depth</dd>
+                <dd id="NErrorDialog.devicePixelRatio" class="function">devicePixelRatio</dd>
+                <dd id="NErrorDialog.devicePixelRatioF" class="function">devicePixelRatioF</dd>
+                <dd id="NErrorDialog.devicePixelRatioFScale" class="function">devicePixelRatioFScale</dd>
+                <dd id="NErrorDialog.heightMM" class="function">heightMM</dd>
+                <dd id="NErrorDialog.logicalDpiX" class="function">logicalDpiX</dd>
+                <dd id="NErrorDialog.logicalDpiY" class="function">logicalDpiY</dd>
+                <dd id="NErrorDialog.paintingActive" class="function">paintingActive</dd>
+                <dd id="NErrorDialog.physicalDpiX" class="function">physicalDpiX</dd>
+                <dd id="NErrorDialog.physicalDpiY" class="function">physicalDpiY</dd>
+                <dd id="NErrorDialog.widthMM" class="function">widthMM</dd>
+                <dd id="NErrorDialog.painters" class="variable">painters</dd>
+                <dd id="NErrorDialog.PaintDeviceMetric" class="class">PaintDeviceMetric</dd>
+                <dd id="NErrorDialog.PdmWidth" class="variable">PdmWidth</dd>
+                <dd id="NErrorDialog.PdmHeight" class="variable">PdmHeight</dd>
+                <dd id="NErrorDialog.PdmWidthMM" class="variable">PdmWidthMM</dd>
+                <dd id="NErrorDialog.PdmHeightMM" class="variable">PdmHeightMM</dd>
+                <dd id="NErrorDialog.PdmNumColors" class="variable">PdmNumColors</dd>
+                <dd id="NErrorDialog.PdmDepth" class="variable">PdmDepth</dd>
+                <dd id="NErrorDialog.PdmDpiX" class="variable">PdmDpiX</dd>
+                <dd id="NErrorDialog.PdmDpiY" class="variable">PdmDpiY</dd>
+                <dd id="NErrorDialog.PdmPhysicalDpiX" class="variable">PdmPhysicalDpiX</dd>
+                <dd id="NErrorDialog.PdmPhysicalDpiY" class="variable">PdmPhysicalDpiY</dd>
+                <dd id="NErrorDialog.PdmDevicePixelRatio" class="variable">PdmDevicePixelRatio</dd>
+                <dd id="NErrorDialog.PdmDevicePixelRatioScaled" class="variable">PdmDevicePixelRatioScaled</dd>
+
+            </div>
+                                </dl>
+                            </div>
+                </section>
+    </main>
+<script>
+    function escapeHTML(html) {
+        return document.createElement('div').appendChild(document.createTextNode(html)).parentNode.innerHTML;
+    }
+
+    const originalContent = document.querySelector("main.pdoc");
+    let currentContent = originalContent;
+
+    function setContent(innerHTML) {
+        let elem;
+        if (innerHTML) {
+            elem = document.createElement("main");
+            elem.classList.add("pdoc");
+            elem.innerHTML = innerHTML;
+        } else {
+            elem = originalContent;
+        }
+        if (currentContent !== elem) {
+            currentContent.replaceWith(elem);
+            currentContent = elem;
+        }
+    }
+
+    function getSearchTerm() {
+        return (new URL(window.location)).searchParams.get("search");
+    }
+
+    const searchBox = document.querySelector(".pdoc input[type=search]");
+    searchBox.addEventListener("input", function () {
+        let url = new URL(window.location);
+        if (searchBox.value.trim()) {
+            url.hash = "";
+            url.searchParams.set("search", searchBox.value);
+        } else {
+            url.searchParams.delete("search");
+        }
+        history.replaceState("", "", url.toString());
+        onInput();
+    });
+    window.addEventListener("popstate", onInput);
+
+
+    let search, searchErr;
+
+    async function initialize() {
+        try {
+            search = await new Promise((resolve, reject) => {
+                const script = document.createElement("script");
+                script.type = "text/javascript";
+                script.async = true;
+                script.onload = () => resolve(window.pdocSearch);
+                script.onerror = (e) => reject(e);
+                script.src = "../../search.js";
+                document.getElementsByTagName("head")[0].appendChild(script);
+            });
+        } catch (e) {
+            console.error("Cannot fetch pdoc search index");
+            searchErr = "Cannot fetch search index.";
+        }
+        onInput();
+
+        document.querySelector("nav.pdoc").addEventListener("click", e => {
+            if (e.target.hash) {
+                searchBox.value = "";
+                searchBox.dispatchEvent(new Event("input"));
+            }
+        });
+    }
+
+    function onInput() {
+        setContent((() => {
+            const term = getSearchTerm();
+            if (!term) {
+                return null
+            }
+            if (searchErr) {
+                return `<h3>Error: ${searchErr}</h3>`
+            }
+            if (!search) {
+                return "<h3>Searching...</h3>"
+            }
+
+            window.scrollTo({top: 0, left: 0, behavior: 'auto'});
+
+            const results = search(term);
+
+            let html;
+            if (results.length === 0) {
+                html = `No search results for '${escapeHTML(term)}'.`
+            } else {
+                html = `<h4>${results.length} search result${results.length > 1 ? "s" : ""} for '${escapeHTML(term)}'.</h4>`;
+            }
+            for (let result of results.slice(0, 10)) {
+                let doc = result.doc;
+                let url = `../../${doc.modulename.replaceAll(".", "/")}.html`;
+                if (doc.qualname) {
+                    url += `#${doc.qualname}`;
+                }
+
+                let heading;
+                switch (result.doc.type) {
+                    case "function":
+                        heading = `<span class="def">${doc.funcdef}</span> <span class="name">${doc.fullname}</span><span class="signature">(${doc.parameters.join(", ")})</span>`;
+                        break;
+                    case "class":
+                        heading = `<span class="def">class</span> <span class="name">${doc.fullname}</span>`;
+                        break;
+                    default:
+                        heading = `<span class="name">${doc.fullname}</span>`;
+                        break;
+                }
+                html += `
+                        <section class="search-result">
+                        <a href="${url}" class="attr ${doc.type}">${heading}</a>
+                        <div class="docstring">${doc.doc}</div>
+                        </section>
+                    `;
+
+            }
+            return html;
+        })());
+    }
+
+    if (getSearchTerm()) {
+        initialize();
+        searchBox.value = getSearchTerm();
+        onInput();
+    } else {
+        searchBox.addEventListener("focus", initialize, {once: true});
+    }
+
+    searchBox.addEventListener("keydown", e => {
+        if (["ArrowDown", "ArrowUp", "Enter"].includes(e.key)) {
+            let focused = currentContent.querySelector(".search-result.focused");
+            if (!focused) {
+                currentContent.querySelector(".search-result").classList.add("focused");
+            } else if (
+                e.key === "ArrowDown"
+                && focused.nextElementSibling
+                && focused.nextElementSibling.classList.contains("search-result")
+            ) {
+                focused.classList.remove("focused");
+                focused.nextElementSibling.classList.add("focused");
+                focused.nextElementSibling.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "nearest"
+                });
+            } else if (
+                e.key === "ArrowUp"
+                && focused.previousElementSibling
+                && focused.previousElementSibling.classList.contains("search-result")
+            ) {
+                focused.classList.remove("focused");
+                focused.previousElementSibling.classList.add("focused");
+                focused.previousElementSibling.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "nearest"
+                });
+            } else if (
+                e.key === "Enter"
+            ) {
+                focused.querySelector("a").click();
+            }
+        }
+    });
+</script></body>
+</html>

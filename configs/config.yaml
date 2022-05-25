@@ -1,0 +1,15 @@
+locked_menus:
+    - "&File"
+
+font_types:
+    - ".ttf"
+
+icons_location: "icons"
+
+styles_location: "nori_ui/styles"
+
+palettes_location: "palettes"
+
+fonts_location: "fonts"
+
+nori_github_page: 'https://github.com/amorphousWaste/nori'
